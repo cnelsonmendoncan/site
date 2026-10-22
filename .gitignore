@@ -1,0 +1,4 @@
+deploy/
+__pycache__/
+scripts/deploy
+.DS_Store

@@ -1,0 +1,36 @@
+# Painel de edição (Pages CMS · app.pagescms.org)
+media:
+  input: static/imagens
+  output: /imagens
+
+content:
+  - name: textos
+    label: "Textos · A vida como ela se diz"
+    type: collection
+    path: content/textos
+    format: yaml-frontmatter
+    filename: "{primary}.md"
+    view:
+      primary: title
+      fields: [title, date, rascunho]
+      sort: date
+      order: desc
+    fields:
+      - name: title
+        label: "Título"
+        type: string
+        required: true
+      - name: date
+        label: "Data"
+        type: date
+        required: true
+      - name: resumo
+        label: "Frase de abertura (aparece na lista de textos e quando o link é compartilhado)"
+        type: text
+      - name: rascunho
+        label: "Rascunho: deixe marcado para salvar sem publicar"
+        type: boolean
+        default: false
+      - name: body
+        label: "Texto"
+        type: rich-text

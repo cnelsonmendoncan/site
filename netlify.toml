@@ -1,0 +1,7 @@
+# O Netlify monta o site sozinho a cada mudança no GitHub
+[build]
+  command = "python3 build.py"
+  publish = "deploy"
+
+[build.environment]
+  PYTHON_VERSION = "3.12"

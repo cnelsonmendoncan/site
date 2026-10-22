@@ -1,0 +1,7 @@
+.trilha{position:fixed;left:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:30;display:inline-flex;align-items:center;gap:10px;background:rgba(30,39,52,.92);color:var(--paper);border:1px solid rgba(239,230,216,.18);border-radius:999px;padding:10px 16px 10px 12px;font:600 13px var(--body);cursor:pointer;box-shadow:0 8px 24px rgba(16,22,30,.25)}
+.trilha:hover{background:var(--prof)}
+.tr-ic{display:inline-flex;align-items:flex-end;gap:2px;height:14px;width:14px}
+.tr-ic i{display:block;width:3px;height:5px;background:var(--acol);border-radius:1px}
+.trilha.on .tr-ic i{animation:tr 1s ease-in-out infinite}.trilha.on .tr-ic i:nth-child(2){animation-delay:.2s}.trilha.on .tr-ic i:nth-child(3){animation-delay:.4s}
+@keyframes tr{0%,100%{height:4px}50%{height:14px}}
+@media (prefers-reduced-motion:reduce){.trilha.on .tr-ic i{animation:none;height:10px}}

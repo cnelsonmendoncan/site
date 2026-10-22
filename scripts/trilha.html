@@ -1,0 +1,35 @@
+<button class="trilha" type="button" data-persist aria-pressed="false" aria-label="Tocar trilha sonora (volume baixo)"><span class="tr-ic" aria-hidden="true"><i></i><i></i><i></i></span><span class="tr-tx">Ouvir a trilha</span></button>
+<script data-persist>(function(){
+if(window.__trilha)return;window.__trilha=1;
+var L=["/trilha-free-yourself.mp3","/trilha-paroles-paroles.mp3"],V=0.12,K="nmn-trilha",a=new Audio(),k=0;a.preload="none";a.volume=V;
+function st(){try{return JSON.parse(sessionStorage.getItem(K)||"{}")}catch(e){return {}}}
+function save(){try{sessionStorage.setItem(K,JSON.stringify({on:!a.paused,k:k,t:a.currentTime||0}))}catch(e){}}
+function btn(){return document.querySelector(".trilha")}
+function ui(){var b=btn();if(!b)return;var on=!a.paused;b.setAttribute("aria-pressed",on?"true":"false");b.setAttribute("aria-label",on?"Pausar trilha sonora":"Tocar trilha sonora (volume baixo)");b.querySelector(".tr-tx").textContent=on?"Pausar a trilha":"Ouvir a trilha";b.classList.toggle("on",on)}
+function load(i,t){k=i%L.length;a.src=L[k];a.volume=V;if(t){a.addEventListener("loadedmetadata",function f(){a.removeEventListener("loadedmetadata",f);try{a.currentTime=t}catch(e){}})}}
+a.addEventListener("ended",function(){load(k+1,0);a.play().catch(function(){})});
+a.addEventListener("play",function(){ui();save()});a.addEventListener("pause",function(){ui();save()});
+setInterval(function(){if(!a.paused)save()},2000);addEventListener("pagehide",save);
+document.addEventListener("click",function(e){var b=e.target.closest&&e.target.closest(".trilha");if(!b)return;
+ if(a.paused){if(!a.src)load(k,0);a.play().catch(function(){ui()})}else a.pause()});
+/* retomar ao abrir outra página do site */
+var s=st();if(s.on){load(s.k||0,s.t||0);a.play().catch(function(){ui()})}else{k=s.k||0}
+/* navegação interna sem recarregar, para a música não parar */
+var PAGES=/^(\/|\/index(\.html)?|\/pagamento(\.html)?|\/livros(\.html)?|\/sobre(\.html)?|\/comecar(\.html)?|\/textos(\.html)?|\/textos\/[a-z0-9-]+(\.html)?)$/;
+function local(u){return u.origin===location.origin&&PAGES.test(u.pathname)}
+function run(root){[].slice.call(root.querySelectorAll("script")).forEach(function(o){if(o.hasAttribute("data-persist")||o.type==="application/ld+json")return;var n=document.createElement("script");n.textContent=o.textContent;o.replaceWith(n)})}
+function go(url,push){return fetch(url,{credentials:"same-origin"}).then(function(r){if(!r.ok)throw 0;return r.text()}).then(function(h){
+ var d=new DOMParser().parseFromString(h,"text/html");document.title=d.title;
+ var ns=d.querySelector("style"),os=document.querySelector("style");if(ns&&os)os.textContent=ns.textContent;
+ [].slice.call(document.body.children).forEach(function(c){if(!c.hasAttribute("data-persist"))c.remove()});
+ var keep=document.body.firstChild;
+ [].slice.call(d.body.children).forEach(function(c){if(c.hasAttribute("data-persist"))return;document.body.insertBefore(document.importNode(c,true),keep)});
+ if(push)history.pushState({p:1},"",url);run(document.body);
+ var u=new URL(url,location.href),t=u.hash&&document.getElementById(u.hash.slice(1));
+ if(t)t.scrollIntoView();else scrollTo(0,0);ui();
+ var m=document.querySelector("main");if(m)m.focus({preventScroll:true});}).catch(function(){location.href=url})}
+document.addEventListener("click",function(e){if(a.paused||e.defaultPrevented||e.button||e.metaKey||e.ctrlKey||e.shiftKey||e.altKey)return;
+ var l=e.target.closest&&e.target.closest("a[href]");if(!l||l.target||l.hasAttribute("download"))return;var u=new URL(l.href,location.href);if(!local(u))return;
+ if(u.pathname===location.pathname&&u.hash)return;e.preventDefault();go(u.href,true)});
+addEventListener("popstate",function(){if(!a.paused)go(location.href,false);else location.reload()});
+})();</script>
