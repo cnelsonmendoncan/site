@@ -57,6 +57,7 @@ CSS = '''
 .tx-list{background:var(--paper) url(tex_paper.jpg) center/cover}
 .tx-items{list-style:none;margin:0;padding:0;display:grid;gap:0;max-width:820px}
 .tx-item{border-top:1px solid var(--line)}.tx-item:last-child{border-bottom:1px solid var(--line)}
+.tx-list .tx-items{gap:18px}.tx-list .tx-item,.tx-list .tx-item:last-child{border:0;background:rgba(251,248,243,.94);box-shadow:0 18px 40px rgba(30,39,52,.14);border-left:3px solid var(--terra)}.tx-list .tx-item a{padding:26px 28px}
 .tx-item a{display:block;padding:30px 0;text-decoration:none;color:var(--ink)}
 .tx-meta{font:700 11px var(--body);letter-spacing:.2em;text-transform:uppercase;color:var(--terra)}
 .tx-item h2,.tx-card h3{font-family:var(--display);font-weight:400;font-size:clamp(24px,2.8vw,32px);line-height:1.2;margin:10px 0 10px;letter-spacing:-.01em}
@@ -90,7 +91,7 @@ CSS = '''
 .tx-card{border-top:2px solid var(--prof);padding-top:6px;min-width:0}
 .tx-card a{display:block;text-decoration:none;color:var(--ink);padding-top:12px}
 .tx-home{background:#E3D0B8 url(tex_textos.jpg) center/cover}
-@media (max-width:760px){.tx-home{background-image:url(tex_textos_m.jpg);background-position:30% center}}
+@media (max-width:760px){.tx-home{background-image:linear-gradient(rgba(242,235,224,.55),rgba(242,235,224,.2) 40%,rgba(242,235,224,0)),url(tex_textos_m.jpg);background-position:center,0 70%;background-size:cover,cover}}
 .txq{margin:8px 0 0;max-width:900px}
 .txq blockquote{margin:0;font-family:var(--display);font-style:italic;font-weight:400;font-size:clamp(30px,4.4vw,54px);line-height:1.15;letter-spacing:-.01em;color:var(--ink)}
 .txq figcaption{margin-top:22px;font-size:15px;color:var(--muted)}
@@ -197,19 +198,41 @@ if(navigator.clipboard)navigator.clipboard.writeText(u).then(ok,function(){{prom
     # seção de textos na página Livros e textos (abaixo dos livros)
     lv = open("deploy/livros.html", encoding="utf-8").read()
     if "<!--TEXTOS-->" in lv:
+        def short(d): return f"{d.day} {MESES[d.month-1][:3]}. {d.year}"
         if posts:
-            top = posts[:4]
-            items = "".join(
-                f'<li class="tx-item"><a href="textos/{p["slug"]}.html"><span class="tx-meta">{br(p["date"])} · {p["min"]} min de leitura</span>'
-                f'<h3>{esc(p["title"])}</h3><p>{esc(p["resumo"])}</p><span class="tx-go">Ler o texto <span aria-hidden="true">→</span></span></a></li>' for p in top)
-            more = '<p class="tx-all"><a class="pill pill-line" href="textos.html">Ver todos os textos <span aria-hidden="true">→</span></a></p>' if len(posts) > len(top) else ''
-            body = f'<ul class="tx-items">{items}</ul>{more}'
+            top = posts[:3]
+            def card(p, i):
+                q = f'<blockquote class="txc-q">“{esc(p["cit"].strip(chr(8220)+chr(8221)+chr(34)+" "))}”</blockquote>' if (i == 0 and p["cit"]) else ""
+                return (f'<li><a class="txc{" txc-main" if i == 0 else ""}" href="textos/{p["slug"]}.html">{q}'
+                        f'<span class="tx-meta">{short(p["date"])} · {p["min"]} min de leitura</span>'
+                        f'<h3>{esc(p["title"])}</h3><p>{esc(p["resumo"])}</p><span class="tx-go">Ler o texto <span aria-hidden="true">→</span></span></a></li>')
+            body = '<ul class="txc-list">' + "".join(card(p, i) for i, p in enumerate(top)) + '</ul>'
         else:
             body = '<p class="tx-empty">Os primeiros textos chegam em breve.</p>'
-        sec = (f'<section class="lv-sec lv-alt tx-home" id="textos" aria-labelledby="t-txt"><div class="wrap"><p class="eb">Textos</p>'
-               f'<h2 id="t-txt">A vida como ela <em>se diz.</em></h2>'
-               f'<p class="lv-hint" style="margin-top:-14px">O que a psicanálise escuta no amor, na saudade, no trabalho e em tudo aquilo que se repete.</p>{body}</div></section>')
-        lv = lv.replace("<!--TEXTOS-->", sec).replace("</style>", CSS + ".lv-sec .tx-item h3{font-family:var(--display);font-weight:400;font-size:clamp(22px,2.4vw,28px);line-height:1.2;margin:10px 0}.tx-all{margin-top:30px}</style>", 1)
+        n = len(posts)
+        sec = (f'<section class="lv-sec tx-home tx-feat" id="textos" aria-labelledby="t-txt"><div class="wrap txf">'
+               f'<div class="txf-intro"><p class="eb">Textos</p><h2 id="t-txt">A vida como ela <em>se diz.</em></h2>'
+               f'<p class="txf-lead">Além dos livros, eu escrevo textos curtos sobre o que a psicanálise escuta no amor, na saudade, no trabalho e em tudo aquilo que se repete.</p>'
+               f'<a class="pill pill-line" href="textos.html">Todos os textos <span aria-hidden="true">→</span></a></div>'
+               f'<div class="txf-cards">{body}<a class="pill pill-line txf-m" href="textos.html">Todos os textos <span aria-hidden="true">→</span></a></div></div></section>')
+        FEAT = """.tx-feat{padding:clamp(64px,8vw,112px) 0}
+.txf{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:clamp(32px,5vw,72px);align-items:center}
+.tx-home .eb{color:var(--prof)}.tx-home .eb::after{background:var(--prof)}
+.txc-main{padding:34px 34px 30px}
+.txc-q{margin:0 0 22px;padding-bottom:20px;border-bottom:1px solid var(--line);font-family:var(--display);font-style:italic;font-size:clamp(21px,2.2vw,26px);line-height:1.35;color:var(--terra)}
+.txf-intro h2{font-family:var(--display);font-weight:400;font-size:clamp(36px,4.6vw,56px);line-height:1.05;margin:6px 0 18px}
+.txf-intro h2 em{font-style:italic;font-weight:300;color:var(--terra)}
+.txf-lead{font-family:var(--display);font-size:clamp(19px,1.8vw,22px);line-height:1.5;color:#262E3A;margin:0 0 28px;max-width:34ch}
+.txc-list{list-style:none;margin:0;padding:0;display:grid;gap:18px}
+.txc{display:block;text-decoration:none;color:var(--ink);background:rgba(251,248,243,.94);padding:26px 28px;box-shadow:0 18px 40px rgba(30,39,52,.14);border-left:3px solid var(--terra);transition:transform .25s ease,box-shadow .25s ease}
+.txc:hover{transform:translateY(-3px);box-shadow:0 24px 50px rgba(30,39,52,.2)}
+.txc h3{font-family:var(--display);font-weight:400;font-size:clamp(22px,2.2vw,27px);line-height:1.2;margin:10px 0 8px}
+.txc p{font-size:15.5px;line-height:1.6;color:var(--muted);margin:0}
+.txf-m{display:none}
+@media (max-width:860px){.txf{grid-template-columns:1fr}.txf-intro .pill{display:none}.txf-m{display:flex;width:100%;justify-content:center;margin-top:22px}.txc,.txc-main{padding:24px 22px}}
+@media (prefers-reduced-motion:reduce){.txc{transition:none}.txc:hover{transform:none}}
+"""
+        lv = lv.replace("<!--TEXTOS-->", sec).replace("</style>", CSS + FEAT + "</style>", 1)
         open("deploy/livros.html", "w", encoding="utf-8").write(lv)
     return posts
 
