@@ -14,7 +14,7 @@ main=f'''<main id="inicio" class="pg" tabindex="-1">
 
     <div class="pg-block">
       <p class="eb">O tempo do tratamento</p>
-      <p>Na psicanálise, os combinados fazem parte do próprio trabalho. Frequência, horários e honorários são conversados pessoalmente, na entrevista inicial, de forma individual e confidencial.</p>
+      <p>Na psicanálise, os combinados fazem parte do próprio trabalho. Frequência, horários e honorários, inclusive os da própria entrevista, são conversados em conjunto, na sessão, de forma individual e confidencial.</p>
     </div>
 
     <div class="pg-block">
@@ -26,7 +26,7 @@ main=f'''<main id="inicio" class="pg" tabindex="-1">
     </div>
 
     <div class="pg-block pg-inv">
-      <p><b>A entrevista inicial é um atendimento profissional e é remunerada.</b> Ao agendar, você recebe todas as informações para se preparar.</p>
+      <p><b>A entrevista inicial é um atendimento profissional e é remunerada.</b> Os honorários são combinados com você, em conjunto, na própria sessão.</p>
       <div class="pg-btns pg-btns-in"><a class="pill pill-dark" href="{WA}" target="_blank" rel="noopener">Agendar entrevista inicial <span aria-hidden="true">→</span></a></div>
     </div>
 

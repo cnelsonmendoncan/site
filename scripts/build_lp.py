@@ -37,8 +37,8 @@ main=f'''<main id="inicio" tabindex="-1">
   <p class="eb">Como começar</p>
   <h2>Três passos, <em>sem pressa.</em></h2>
   <div class="steps">
-    <div class="step"><h3>1. Você me chama</h3><p>Pelo WhatsApp. Combinamos um horário e eu te passo as informações da entrevista.</p></div>
-    <div class="step"><h3>2. Entrevista inicial</h3><p>Um encontro online para escutar o seu momento e avaliarmos juntos se faz sentido seguir.</p></div>
+    <div class="step"><h3>1. Você me chama</h3><p>Pelo WhatsApp. Combinamos um horário para a sua entrevista.</p></div>
+    <div class="step"><h3>2. Entrevista inicial</h3><p>Um atendimento online e remunerado, para escutar o seu momento e avaliarmos juntos se faz sentido seguir.</p></div>
     <div class="step"><h3>3. Combinamos o acompanhamento</h3><p>Frequência, horários e honorários são conversados ali, de forma individual.</p></div>
   </div>
   <p class="lp-cta"><a class="pill pill-dark" {A}>Agendar entrevista inicial <span aria-hidden="true">→</span></a></p>
@@ -62,7 +62,7 @@ main=f'''<main id="inicio" tabindex="-1">
   <details><summary>A análise online funciona?</summary><p>Sim. O que sustenta o trabalho é a escuta e a regularidade dos encontros. Basta um lugar reservado e boa conexão.</p></details>
   <details><summary>É sigiloso?</summary><p>Sim, sempre. Tudo o que você disser fica entre nós.</p></details>
   <details><summary>Moro em outro país. Como funciona?</summary><p>Os horários são ajustados ao seu fuso e a cobrança é feita na moeda do seu país, sem conversões.</p></details>
-  <details><summary>Quanto custa?</summary><p>O valor da entrevista inicial é informado quando você agenda. O do acompanhamento é combinado com você na própria entrevista.</p></details>
+  <details><summary>Quanto custa?</summary><p>A entrevista inicial é um atendimento profissional e é remunerada. Os honorários são conversados com você, em conjunto, na própria sessão.</p></details>
   <details><summary>Preciso saber exatamente o que falar?</summary><p>Não. A análise também começa pelo que ainda não está organizado.</p></details>
 </div></section>
 
