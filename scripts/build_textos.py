@@ -36,7 +36,7 @@ def load():
         if not resumo:
             txt = H.unescape(re.sub(r"<[^>]+>", " ", body_html)).split()
             resumo = " ".join(txt[:28]) + ("…" if len(txt) > 28 else "")
-        posts.append(dict(title=title, date=d, resumo=resumo, html=body_html,
+        posts.append(dict(cit=str(meta.get("citacao") or "").strip(), title=title, date=d, resumo=resumo, html=body_html,
                           min=max(1, math.ceil(words / 200)), slug=slugify(os.path.splitext(os.path.basename(f))[0])))
     posts.sort(key=lambda p: (p["date"], p["title"]), reverse=True)
     seen = set()
@@ -89,7 +89,12 @@ CSS = '''
 .tx-cards.n1{grid-template-columns:minmax(0,520px)}.tx-cards.n2{grid-template-columns:repeat(2,1fr)}
 .tx-card{border-top:2px solid var(--prof);padding-top:6px;min-width:0}
 .tx-card a{display:block;text-decoration:none;color:var(--ink);padding-top:12px}
-.tx-home .tx-all{margin-top:36px}
+.tx-home{background:var(--paper) url(tex_paper.jpg) center/cover}
+.txq{margin:8px 0 0;max-width:900px}
+.txq blockquote{margin:0;font-family:var(--display);font-style:italic;font-weight:400;font-size:clamp(30px,4.4vw,54px);line-height:1.15;letter-spacing:-.01em;color:var(--ink)}
+.txq figcaption{margin-top:22px;font-size:15px;color:var(--muted)}
+.txq figcaption a{color:var(--terra);font-weight:700;text-decoration:none}
+.txq-btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
 @media (max-width:820px){.tx-cards,.tx-cards.n2{grid-template-columns:1fr}}
 '''
 
@@ -146,7 +151,7 @@ def main():
         more = ""
         if others:
             more = (f'<section class="tx-more" aria-labelledby="t-mais"><div class="wrap"><p class="eb">Continue lendo</p>'
-                    f'<h2 id="t-mais">Outros textos de <em>A vida como ela se diz.</em></h2>'
+                    f'<h2 id="t-mais">Outros textos <em>do Nelson.</em></h2>'
                     f'<div class="tx-cards n{len(others)}">' + "".join(card(q) for q in others) + '</div></div></section>')
         m = f'''<main id="inicio" class="tx" tabindex="-1">
 <article>
@@ -176,13 +181,16 @@ if(navigator.clipboard)navigator.clipboard.writeText(u).then(ok,function(){{prom
         open(f"deploy/textos/{p['slug']}.html", "w", encoding="utf-8").write(
             page(full, m, p["title"] + " · " + SEC, p["resumo"], f"/textos/{p['slug']}", ld, "article"))
 
-    # bloco na página inicial
+    # bloco na página inicial: a citação do texto mais recente que tiver uma
     if posts:
-        top = posts[:3]
-        blk = (f'<section class="tx-more tx-home" id="textos" aria-labelledby="t-textos"><div class="wrap"><p class="eb">Textos</p>'
-               f'<h2 id="t-textos" class="reveal">A vida como ela <em>se diz.</em></h2>'
-               f'<div class="tx-cards n{len(top)}">' + "".join(card(q) for q in top) + '</div>'
-               f'<p class="tx-all"><a class="pill pill-line" href="textos.html">Ver todos os textos <span aria-hidden="true">→</span></a></p></div></section>\n')
+        p = next((q for q in posts if q["cit"]), posts[0])
+        frase = (p["cit"] or p["resumo"]).strip('“”"\' ')
+        blk = (f'<section class="tx-home" id="textos" aria-labelledby="t-textos"><div class="wrap">'
+               f'<p class="eb" id="t-textos">A vida como ela se diz</p>'
+               f'<figure class="txq reveal"><blockquote>“{esc(frase)}”</blockquote>'
+               f'<figcaption>Nelson Mendonça Neto, em <a href="textos/{p["slug"]}.html">{esc(p["title"])}</a></figcaption></figure>'
+               f'<div class="txq-btns"><a class="pill pill-dark" href="textos/{p["slug"]}.html">Ler o texto <span aria-hidden="true">→</span></a>'
+               f'<a class="pill pill-line" href="textos.html">Outros textos do Nelson</a></div></div></section>\n')
         home = full.replace('<section id="duvidas">', blk + '<section id="duvidas">', 1).replace("</style>", CSS + "</style>", 1)
         open("deploy/index.html", "w", encoding="utf-8").write(home)
     return posts

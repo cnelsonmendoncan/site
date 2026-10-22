@@ -27,6 +27,9 @@ content:
       - name: resumo
         label: "Frase de abertura (aparece na lista de textos e quando o link é compartilhado)"
         type: text
+      - name: citacao
+        label: "Citação de destaque (uma frase do texto, que aparece na página inicial)"
+        type: text
       - name: rascunho
         label: "Rascunho: deixe marcado para salvar sem publicar"
         type: boolean

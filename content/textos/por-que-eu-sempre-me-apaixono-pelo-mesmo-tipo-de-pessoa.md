@@ -2,6 +2,7 @@
 title: Por que eu sempre me apaixono pelo mesmo tipo de pessoa?
 date: 2026-10-21
 resumo: Os nomes mudam, as cidades mudam, mas em algum momento você reconhece a cena. A psicanálise tem um nome para esse retorno do mesmo.
+citacao: A cena já não precisa ser repetida, porque pode ser falada.
 rascunho: false
 ---
 Os nomes mudam, as cidades mudam, às vezes até o jeito de se vestir. Mas em algum momento você reconhece a cena. A mesma distância, a mesma espera, o mesmo final. E vem aquela frase, meio piada, meio desabafo: "eu tenho dedo podre".
