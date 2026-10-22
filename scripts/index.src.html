@@ -12,7 +12,8 @@
   color-scheme:light;
 }
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}
+html{scroll-behavior:auto}
+section[id],div[id]{scroll-margin-top:72px}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased}
 a{color:inherit}
@@ -641,7 +642,10 @@ addEventListener("resize",upd);upd();
 var els=[].slice.call(document.querySelectorAll(".reveal"));
 if(!("IntersectionObserver" in window)){els.forEach(function(e){e.classList.add("on")});return}
 var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add("on");io.unobserve(x.target)}})},{rootMargin:"0px 0px 6% 0px"});
-els.forEach(function(e){var r=e.getBoundingClientRect();if(r.top<innerHeight)e.classList.add("on");else io.observe(e)});})();
+els.forEach(function(e){var r=e.getBoundingClientRect();if(r.top<innerHeight)e.classList.add("on");else io.observe(e)});
+function all(){els.forEach(function(e){e.classList.add("on")})}
+if(location.hash)all();addEventListener("hashchange",all);
+document.addEventListener("click",function(e){var a=e.target.closest&&e.target.closest('a[href*="#"]');if(a)all()},true);})();
 </script>
 
 <script>(function(){var m=document.querySelector(".menu");if(!m)return;var sm=m.querySelector("summary");

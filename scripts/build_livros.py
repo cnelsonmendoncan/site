@@ -45,7 +45,7 @@ main=f'''<main id="inicio" class="lv" tabindex="-1">
   <div class="bk-in">
     <picture><source type="image/webp" srcset="capa_massa.webp"><img class="bk-cap" src="capa_massa.jpg" alt="Capa do ebook Massa de manobra: uma multidão de pessoas iguais ouvindo um homem com um megafone" width="640" height="920" loading="lazy"></picture>
     <div class="bk-txt">
-      <p class="tags"><span class="tag t-breve">Gratuito</span><span class="tag">Ebook para psicólogos</span><span class="tag">PDF · 38 páginas</span></p>
+      <p class="tags"><span class="tag t-breve">Gratuito</span><span class="tag">Ebook para psicólogos</span><span class="tag">PDF · 39 páginas</span></p>
       <h3 id="bk-massa-t">Massa de manobra</h3>
       <p class="sub">Neuromarketing, manipulação e por que a psicologia é política.</p>
       <p>Tudo o que a psicologia sabe sobre desejo, vínculo e defesa já está sendo usado por agências, plataformas e campanhas para decidir o que as pessoas compram, do que têm medo e em quem votam. Este ebook mostra como esse mecanismo funciona, o que a neurociência diz sobre por que nos agarramos às nossas crenças, como isso chega ao consultório e o que nós, psicólogos, podemos fazer.</p>
