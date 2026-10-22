@@ -385,13 +385,14 @@ nav a,header .btn{white-space:nowrap}
 
 /* ===== v25: foto do "Quem sou eu" integrada ao fundo ===== */
 .about .cutout{
-  -webkit-mask-image:linear-gradient(to bottom,#000 62%,rgba(0,0,0,.6) 80%,transparent 98%);
-          mask-image:linear-gradient(to bottom,#000 62%,rgba(0,0,0,.6) 80%,transparent 98%);
+  -webkit-mask-image:radial-gradient(ellipse 62% 68% at 50% 42%,#000 58%,rgba(0,0,0,.55) 78%,transparent 100%);
+          mask-image:radial-gradient(ellipse 62% 68% at 50% 42%,#000 58%,rgba(0,0,0,.55) 78%,transparent 100%);
   filter:saturate(.82) brightness(.94) contrast(1.03) sepia(.06);
   translate:none!important}
 .about .wrap{position:relative}
 .about .wrap::before{content:"";position:absolute;left:4%;bottom:0;width:min(46%,520px);height:70%;
-  background:radial-gradient(ellipse at 50% 75%,rgba(201,176,167,.16),rgba(201,176,167,0) 65%);pointer-events:none}
+  background:radial-gradient(ellipse at 50% 75%,rgba(201,176,167,.16),rgba(201,176,167,0) 65%);pointer-events:none;
+  -webkit-mask-image:linear-gradient(to bottom,#000 60%,transparent);mask-image:linear-gradient(to bottom,#000 60%,transparent)}
 @media (max-width:820px){.about .wrap::before{left:0;width:100%;height:45%}}
 
 /* ===== v26: menu de celular (três tracinhos) ===== */

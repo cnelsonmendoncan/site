@@ -44,7 +44,7 @@ main=f'''<main id="inicio" tabindex="-1">
   <p class="lp-cta"><a class="pill pill-dark" {A}>Agendar entrevista inicial <span aria-hidden="true">→</span></a></p>
 </div></section>
 
-<section class="about"><div class="wrap">
+<section class="about" id="sobre"><div class="wrap">
   <img class="cutout" src="foto_sobre.webp" alt="Nelson Mendonça Neto" decoding="async">
   <div class="about-txt">
     <p class="eb">Quem vai te escutar</p>
