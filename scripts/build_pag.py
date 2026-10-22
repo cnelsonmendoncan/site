@@ -15,6 +15,7 @@ main=f'''<main id="inicio" class="pg" tabindex="-1">
     <div class="pg-block">
       <p class="eb">O tempo do tratamento</p>
       <p>Na psicanálise, os combinados fazem parte do próprio trabalho. Frequência, horários e honorários, inclusive os da própria entrevista, são conversados em conjunto, na sessão, de forma individual e confidencial.</p>
+      <p style="margin-top:12px">As sessões duram de 45 a 50 minutos. Quando a demanda pede, podem ser duas vezes por semana ou ter encontros extras, sempre combinados em sessão.</p>
     </div>
 
     <div class="pg-block">
@@ -22,7 +23,8 @@ main=f'''<main id="inicio" class="pg" tabindex="-1">
       <div class="ghost" aria-label="Pix, PayPal e Wise">
         <span class="g">{pix}<b>Pix</b></span><span class="g">{pp}<b>PayPal</b></span><span class="g">{wise}<b>Wise</b></span>
       </div>
-      <p class="pg-small">Para brasileiros no exterior, a cobrança é feita na moeda do seu país, sem conversões. Os dados para pagamento são enviados em particular.</p>
+      <p>Pix, cartão pelo PayPal e, para brasileiros no exterior, PayPal ou Wise, com a cobrança na moeda do seu país, sem conversões. Os planos mensais podem ser parcelados no cartão; sessões avulsas, não.</p>
+      <p class="pg-small">Os dados para pagamento são enviados em particular.</p>
     </div>
 
     <div class="pg-block pg-inv">

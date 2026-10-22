@@ -231,7 +231,8 @@ if(navigator.clipboard)navigator.clipboard.writeText(u).then(ok,function(){{prom
                f'<figcaption>Nelson Mendonça Neto, em <a href="textos/{p["slug"]}.html">{esc(p["title"])}</a></figcaption></figure>'
                f'<div class="txq-btns"><a class="pill pill-dark" href="textos/{p["slug"]}.html">Ler o texto <span aria-hidden="true">→</span></a>'
                f'<a class="pill pill-line" href="textos.html">Outros textos do Nelson</a></div></div></section>\n')
-        home = full.replace('<section id="duvidas">', blk + '<section id="duvidas">', 1).replace("</style>", CSS + "</style>", 1)
+        anchor = '<section id="para-quem-e">' if '<section id="para-quem-e">' in full else '<section id="duvidas">'
+        home = full.replace(anchor, blk + anchor, 1).replace("</style>", CSS + "</style>", 1)
         open("deploy/index.html", "w", encoding="utf-8").write(home)
     # seção de textos na página Livros e textos (abaixo dos livros)
     lv = open("deploy/livros.html", encoding="utf-8").read()
