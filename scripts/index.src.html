@@ -280,12 +280,12 @@ h2 em,h1 em{font-weight:300}
 .abc p{font-size:15.5px;color:var(--muted);margin-top:4px}
 .expat .quote{margin-top:30px;font-family:var(--display);font-style:italic;font-weight:400;font-size:clamp(22px,2.4vw,28px);color:var(--terra)}
 .expat .ctas{display:flex;flex-wrap:wrap;gap:12px}
-.expat{background:#F4ECDF url(tex_paper.jpg) center/cover;padding-bottom:calc(clamp(64px,9vw,112px) + 96px)}
-.expat::after,.slogan::after,#primeiro-encontro::after{content:"";position:absolute;left:0;right:0;bottom:0;height:96px;background:url(pat_blue.jpg) left top/auto 96px repeat-x}
+.expat{background:#F4ECDF url(tex_paper.jpg) center/cover}
+.slogan::after{content:"";position:absolute;left:0;right:0;bottom:0;height:96px;background:url(pat_blue.jpg) left top/auto 96px repeat-x}
 .slogan,#primeiro-encontro{position:relative}
 .slogan::after{background-image:url(pat_navy.jpg)}
 .slogan{padding-bottom:calc(clamp(64px,9vw,112px) + 96px)}
-#primeiro-encontro{background:#8FB0C4 url(tex_blue.jpg) center/cover;padding-bottom:calc(clamp(64px,9vw,112px) + 96px)}
+#primeiro-encontro{background:#8FB0C4 url(tex_blue.jpg) center/cover}
 #primeiro-encontro .step{border-top-color:var(--prof);counter-increment:st}
 #primeiro-encontro .steps{counter-reset:st}
 #primeiro-encontro .step::before{content:counter(st,upper-alpha);display:block;font-family:var(--display);font-weight:300;font-size:34px;line-height:1;color:var(--terra);margin-bottom:10px}
@@ -431,8 +431,8 @@ nav a,header .btn{white-space:nowrap}
  /* faixas decorativas mais baixas */
  .expat .strip{height:90px!important}
  .banner-band{height:120px!important}
- .expat,.slogan,#primeiro-encontro{padding-bottom:calc(56px + 48px)!important}
- .expat::after,.slogan::after,#primeiro-encontro::after{height:48px!important;background-size:auto 48px!important}
+ .slogan{padding-bottom:calc(56px + 48px)!important}
+ .slogan::after{height:48px!important;background-size:auto 48px!important}
 }
 .tgrid-hint{display:none}
 @media (max-width:760px){.tgrid-hint{display:inline-block;margin-top:8px;font-size:13px;color:var(--ink);background:rgba(246,241,233,.9);padding:4px 10px;border-radius:999px}}
@@ -459,8 +459,8 @@ body{background:#F2EBE0}
 .intro,.topics,#para-quem,#duvidas{background:#F6F1E9 url(tex_paper_light.jpg) center/cover!important;background-blend-mode:normal!important}
 body{background:#F6F1E9}
 /* segundo tom claro, bem distinto, alternando com o creme */
-#servicos{background:#DCE6EE url(tex_azul_aquarela.jpg) center/cover!important;background-blend-mode:normal!important}
-@media (max-width:760px){#servicos{background-image:url(tex_azul_aquarela_m.jpg)!important;background-size:100% 100%!important}}
+#servicos{background-color:#8FB0C4!important;background-image:linear-gradient(to bottom,rgba(143,176,196,0) 62%,rgba(143,176,196,.9) 92%,#8FB0C4 96%,#8FB0C4 100%),url(tex_azul_aquarela.jpg)!important;background-size:100% 100%,cover!important;background-position:center!important;background-repeat:no-repeat!important;background-blend-mode:normal!important}
+@media (max-width:760px){#servicos{background-image:linear-gradient(to bottom,rgba(143,176,196,0) 70%,#8FB0C4 100%),url(tex_azul_aquarela_m.jpg)!important;background-size:100% 100%,100% 100%!important}}
 .expat{background:#E6D9C4 url(postal_mar.jpg) left top/100% auto no-repeat!important;background-blend-mode:normal!important}
 .expat{min-height:75vw;box-sizing:border-box;padding-top:clamp(56px,7vw,96px)!important}
 .expat .wrap{display:block;max-width:none;padding-left:calc(22.5vw + 30px);padding-right:max(24px,calc(50vw - 540px))}
@@ -475,7 +475,7 @@ body{background:#F6F1E9}
 .expat .abc li,.expat .abc-more>summary{border-color:rgba(140,81,44,.22)}
 .expat .eb,.expat .abc b,.expat .abc-more>summary,#servicos .eb,#servicos .svc:not(.main) .tag,#servicos .svc:not(.main) a{color:#6E3D1E}
 /* divisória fina entre seções claras vizinhas */
-.intro + .expat,.banner-band + #servicos{box-shadow:inset 0 1px 0 rgba(140,81,44,.18)}
+
 #servicos .svc:not(.main){background:#FBF8F3}
 .topics .tcard{background:#FBF8F3}
 .banner-band{height:clamp(140px,18vw,220px)!important}
@@ -509,15 +509,17 @@ body{background:#F6F1E9}
 .abc-more[open] .abc{background:rgba(246,241,233,.94);padding:6px 26px 18px;box-shadow:0 14px 34px rgba(30,39,52,.12);border-radius:2px;position:relative;z-index:1}
 @media (max-width:820px){.expat:has(.abc-more[open]){background-image:url(postal_mar_m.jpg)!important;background-size:100% auto!important}.abc-more[open] .abc{padding:4px 16px 14px}}
 
-/* ===== limites entre as seções: linha com o monograma ===== */
-.sec-div{position:relative;height:0;z-index:4}
-.sec-div::before{content:"";position:absolute;left:50%;top:0;width:min(1040px,calc(100% - 40px));height:1px;transform:translateX(-50%);background:linear-gradient(to right,rgba(140,81,44,0) 0,rgba(140,81,44,.55) 12%,rgba(140,81,44,.55) calc(50% - 34px),transparent calc(50% - 34px),transparent calc(50% + 34px),rgba(140,81,44,.55) calc(50% + 34px),rgba(140,81,44,.55) 88%,rgba(140,81,44,0) 100%)}
-.sec-div span{position:absolute;left:50%;top:0;transform:translate(-50%,-50%);width:52px;height:52px;border-radius:50%;background:#F6F1E9;border:1px solid rgba(140,81,44,.5);display:grid;place-items:center;box-shadow:0 4px 14px rgba(30,39,52,.12)}
-.sec-div img{width:30px;height:auto;display:block}
-@media (max-width:760px){.sec-div span{width:44px;height:44px}.sec-div img{width:26px}}
 /* temas: aquarela azul e terracota */
 .topics{background:#F3EBDF url(tex_aquarela_azul.jpg) center/cover!important}
 @media (max-width:760px){.topics{background-image:url(tex_aquarela_azul_m.jpg)!important;background-size:100% 100%!important}}
+
+/* ===== arquitetura: 4 capítulos separados por uma única faixa de ondas ===== */
+.chap{height:44px;background:#8FB0C4 url(pat_blue.jpg) left center/auto 44px repeat-x;border-top:1px solid rgba(30,39,52,.25);border-bottom:1px solid rgba(30,39,52,.25)}
+@media (max-width:760px){.chap{height:30px;background-size:auto 30px}}
+
+#primeiro-encontro{background-image:linear-gradient(to bottom,#8FB0C4 0,rgba(143,176,196,0) 180px),url(tex_blue.jpg)!important;background-size:100% 100%,cover!important}
+
+#primeiro-encontro{margin-top:-2px;z-index:1}
 </style>
 
 <a class="skip" href="#inicio">Pular para o conteúdo</a>
@@ -561,7 +563,7 @@ body{background:#F6F1E9}
   </div>
 </section>
 
-<div class="sec-div" aria-hidden="true"><span><img src="mono_terra.png" alt="" width="40" height="15"></span></div>
+<div class="chap" aria-hidden="true"></div>
 <section class="expat" id="expatriados">
   <div class="wrap">
     <div class="strip" aria-hidden="true"></div>
@@ -600,7 +602,6 @@ body{background:#F6F1E9}
   </div>
 </section>
 
-<div class="sec-div" aria-hidden="true"><span><img src="mono_terra.png" alt="" width="40" height="15"></span></div>
 <section class="topics" id="temas">
   <div class="wrap">
     <p class="eb">Fale comigo</p>
@@ -618,8 +619,9 @@ body{background:#F6F1E9}
   </div>
 </section>
 
-<div class="banner-band" data-bg="0.35" aria-hidden="true"></div>
 
+
+<div class="chap" aria-hidden="true"></div>
 <section id="servicos">
   <div class="wrap">
     <span class="num">02</span>
@@ -635,7 +637,6 @@ body{background:#F6F1E9}
 
 
 
-<div class="sec-div" aria-hidden="true"><span><img src="mono_terra.png" alt="" width="40" height="15"></span></div>
 <section id="primeiro-encontro">
   <div class="wrap">
     <span class="num">03</span>
@@ -668,7 +669,7 @@ body{background:#F6F1E9}
   </div>
 </section>
 
-<div class="sec-div" aria-hidden="true"><span><img src="mono_terra.png" alt="" width="40" height="15"></span></div>
+<div class="chap" aria-hidden="true"></div>
 <section class="about" id="sobre">
   <div class="wrap">
     <img class="cutout" src="foto_sobre.webp" alt="Nelson Mendonça Neto" loading="lazy" decoding="async">
@@ -684,7 +685,6 @@ body{background:#F6F1E9}
   </div>
 </section>
 
-<div class="sec-div" aria-hidden="true"><span><img src="mono_terra.png" alt="" width="40" height="15"></span></div>
 <section id="para-quem-e">
   <div class="wrap">
     <p class="eb">Para quem é</p>
@@ -701,7 +701,6 @@ body{background:#F6F1E9}
   </div>
 </section>
 
-<div class="sec-div" aria-hidden="true"><span><img src="mono_terra.png" alt="" width="40" height="15"></span></div>
 <section id="duvidas">
   <div class="wrap">
     <p class="eb">Dúvidas frequentes</p>
@@ -719,7 +718,6 @@ body{background:#F6F1E9}
   </div>
 </section>
 
-<div class="sec-div" aria-hidden="true"><span><img src="mono_terra.png" alt="" width="40" height="15"></span></div>
 <section class="slogan" id="contato" aria-labelledby="t-contato"><h2 class="sr" id="t-contato">Contato</h2>
   <div class="wrap">
     <img class="closing-mono" src="mono_acol.png" alt="" width="120" height="44">
