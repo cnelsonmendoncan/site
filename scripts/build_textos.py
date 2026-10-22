@@ -239,12 +239,12 @@ if(navigator.clipboard)navigator.clipboard.writeText(u).then(ok,function(){{prom
         def short(d): return f"{d.day} {MESES[d.month-1][:3]}. {d.year}"
         if posts:
             top = posts[:3]
-            def card(p, i):
+            def fcard(p, i):
                 q = f'<blockquote class="txc-q">“{esc(p["cit"].strip(chr(8220)+chr(8221)+chr(34)+" "))}”</blockquote>' if (i == 0 and p["cit"]) else ""
                 return (f'<li><a class="txc{" txc-main" if i == 0 else ""}" href="textos/{p["slug"]}.html">{q}'
                         f'<span class="tx-meta">{short(p["date"])} · {p["min"]} min de leitura</span>'
                         f'<h3>{esc(p["title"])}</h3><p>{esc(p["resumo"])}</p><span class="tx-go">Ler o texto <span aria-hidden="true">→</span></span></a></li>')
-            body = '<ul class="txc-list">' + "".join(card(p, i) for i, p in enumerate(top)) + '</ul>'
+            body = '<ul class="txc-list">' + "".join(fcard(p, i) for i, p in enumerate(top)) + '</ul>'
         else:
             body = '<p class="tx-empty">Os primeiros textos chegam em breve.</p>'
         n = len(posts)
