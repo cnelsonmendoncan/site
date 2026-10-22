@@ -89,7 +89,8 @@ CSS = '''
 .tx-cards.n1{grid-template-columns:minmax(0,520px)}.tx-cards.n2{grid-template-columns:repeat(2,1fr)}
 .tx-card{border-top:2px solid var(--prof);padding-top:6px;min-width:0}
 .tx-card a{display:block;text-decoration:none;color:var(--ink);padding-top:12px}
-.tx-home{background:var(--paper) url(tex_paper.jpg) center/cover}
+.tx-home{background:#E3D0B8 url(tex_textos.jpg) center/cover}
+@media (max-width:760px){.tx-home{background-image:url(tex_textos_m.jpg);background-position:30% center}}
 .txq{margin:8px 0 0;max-width:900px}
 .txq blockquote{margin:0;font-family:var(--display);font-style:italic;font-weight:400;font-size:clamp(30px,4.4vw,54px);line-height:1.15;letter-spacing:-.01em;color:var(--ink)}
 .txq figcaption{margin-top:22px;font-size:15px;color:var(--muted)}
