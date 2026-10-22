@@ -47,6 +47,8 @@ def load():
 
 CSS = '''
 /* ===== A vida como ela se diz ===== */
+.art-body .art-pull{margin:1.8em 0;padding:26px 0;border:0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);text-align:center}
+.art-body .art-pull p{margin:0;font-style:italic;font-size:clamp(23px,2.4vw,29px);line-height:1.35;color:var(--terra)}
 .tx-hero{background:var(--prof) url(tex_navy.jpg) center/cover;color:var(--paper);padding:clamp(56px,8vw,110px) 0 clamp(48px,6vw,80px)}
 .tx-hero .crumb{display:flex;flex-wrap:wrap;gap:10px;font-size:13px;color:#9AA3AF;margin-bottom:26px}
 .tx-hero .crumb a{color:var(--acol);text-decoration:none;font-weight:700}
@@ -59,16 +61,17 @@ CSS = '''
 .tx-item{border-top:1px solid var(--line)}.tx-item:last-child{border-bottom:1px solid var(--line)}
 .tx-list .tx-items{gap:18px}.tx-list .tx-item,.tx-list .tx-item:last-child{border:0;background:rgba(251,248,243,.94);box-shadow:0 18px 40px rgba(30,39,52,.14);border-left:3px solid var(--terra)}.tx-list .tx-item a{padding:26px 28px}
 .tx-item a{display:block;padding:30px 0;text-decoration:none;color:var(--ink)}
-.tx-meta{font:700 11px var(--body);letter-spacing:.2em;text-transform:uppercase;color:var(--terra)}
+.tx-meta{font:700 12px var(--body);letter-spacing:.2em;text-transform:uppercase;color:var(--terra)}
 .tx-item h2,.tx-card h3{font-family:var(--display);font-weight:400;font-size:clamp(24px,2.8vw,32px);line-height:1.2;margin:10px 0 10px;letter-spacing:-.01em}
 .tx-item p,.tx-card p{font-size:16px;line-height:1.65;color:var(--muted);max-width:62ch}
 .tx-go{display:inline-block;margin-top:12px;font-weight:700;font-size:14.5px;color:var(--terra)}
 .tx-item a:hover h2,.tx-card a:hover h3{color:var(--terra)}
 .tx-empty{font-family:var(--display);font-style:italic;font-size:22px;color:var(--muted)}
 .art-hero h1{font-size:clamp(34px,5vw,60px);max-width:22ch}
-.art-hero .tx-meta{color:#C9B0A7;margin-top:22px;display:block}
+.art-hero .tx-meta{color:#E3D0C8;margin-top:22px;display:block;font-size:12.5px}
 .art{background:#FBF8F3}
-.art-body{max-width:680px;margin:0 auto;font-family:var(--display);font-size:clamp(18px,1.6vw,20px);line-height:1.75;color:#262E3A}
+.tx .art{padding-top:clamp(40px,5vw,64px)}
+.art-body{max-width:640px;margin:0 auto;font-family:var(--display);font-size:clamp(18px,1.6vw,20px);line-height:1.75;color:#262E3A}
 .art-body p{margin:0 0 1.15em}
 .art-body h2,.art-body h3{font-family:var(--display);font-weight:500;font-size:1.35em;line-height:1.25;margin:1.6em 0 .6em;color:var(--ink)}
 .art-body blockquote{margin:1.6em 0;padding:4px 0 4px 24px;border-left:2px solid var(--terra);font-style:italic;font-size:1.12em;color:var(--terra)}
@@ -76,13 +79,13 @@ CSS = '''
 .art-body a{color:var(--terra)}
 .art-body ul,.art-body ol{padding-left:1.3em;margin:0 0 1.15em}
 .art-body img{max-width:100%;height:auto;margin:1em 0}
-.art-sign{max-width:680px;margin:36px auto 0;padding-top:20px;border-top:1px solid var(--line);font-size:14px;color:var(--muted)}
+.art-sign{max-width:640px;margin:36px auto 0;padding-top:20px;border-top:1px solid var(--line);font-size:14px;color:var(--muted)}
 .art-sign b{display:block;font-family:var(--display);font-weight:500;font-size:18px;color:var(--ink)}
-.art-share{max-width:680px;margin:22px auto 0;display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.art-share{max-width:640px;margin:22px auto 0;display:flex;flex-wrap:wrap;gap:10px;align-items:center}
 .art-share span{font:700 11px var(--body);letter-spacing:.2em;text-transform:uppercase;color:var(--terra);margin-right:6px}
 .art-share a,.art-share button{font:600 13.5px var(--body);color:var(--ink);background:#fff;border:1px solid var(--line);border-radius:999px;padding:8px 16px;cursor:pointer;text-decoration:none}
 .art-share a:hover,.art-share button:hover{border-color:var(--prof)}
-.art-cta{max-width:680px;margin:48px auto 0;background:var(--prof) url(tex_navy.jpg) center/cover;color:var(--paper);padding:clamp(28px,4vw,40px)}
+.art-cta{max-width:640px;margin:48px auto 0;background:var(--prof) url(tex_navy.jpg) center/cover;color:var(--paper);padding:clamp(28px,4vw,40px)}
 .art-cta p{font-family:var(--display);font-style:italic;font-size:clamp(21px,2.2vw,26px);line-height:1.35;margin:0 0 20px}
 .art-cta .pill{background:var(--paper);color:var(--prof)}.art-cta .pill:hover{background:var(--acol)}
 .tx-more{background:var(--paper) url(tex_paper.jpg) center/cover}
@@ -115,6 +118,14 @@ def page(full, main, title, desc, path, ld=None, og_type="website"):
     out = out.replace('<link rel="canonical" href="https://nelsonmendonca.com/">', '<link rel="canonical" href="' + SITE + path + '">')
     out = out.replace('<meta property="og:url" content="https://nelsonmendonca.com/">', '<meta property="og:url" content="' + SITE + path + '">')
     return out
+
+def with_quote(p):
+    h = p["html"]
+    if not p["cit"]: return h
+    paras = [x for x in re.split(r'(?<=</p>)', h) if x.strip()]
+    k = max(1, len(paras) // 2)
+    q = '<blockquote class="art-pull"><p>“' + esc(p["cit"].strip(chr(8220)+chr(8221)+chr(34)+" ")) + '”</p></blockquote>'
+    return "".join(paras[:k]) + q + "".join(paras[k:])
 
 def card(p, tag="h3"):
     return (f'<article class="tx-card"><a href="textos/{p["slug"]}.html"><span class="tx-meta">{br(p["date"])} · {p["min"]} min de leitura</span>'
@@ -164,7 +175,7 @@ def main():
   <span class="tx-meta"><time datetime="{p["date"].isoformat()}">{br(p["date"])}</time> · {p["min"]} min de leitura</span>
 </div></div>
 <section class="art"><div class="wrap">
-  <div class="art-body">{p["html"]}</div>
+  <div class="art-body">{with_quote(p)}</div>
   <p class="art-sign"><b>Nelson Mendonça Neto</b>Psicólogo e psicanalista · CRP 19/3888</p>
   <div class="art-share"><span>Compartilhar</span><a href="{share}" target="_blank" rel="noopener">WhatsApp</a><button type="button" class="copy" data-url="{url}">Copiar link</button></div>
   <div class="art-cta"><p>Se este texto falou de você, a análise pode ser um lugar para isso.</p><a class="pill" href="pagamento.html">Quero começar <span aria-hidden="true">→</span></a></div>
@@ -215,9 +226,9 @@ if(navigator.clipboard)navigator.clipboard.writeText(u).then(ok,function(){{prom
                f'<p class="txf-lead">Além dos livros, eu escrevo textos curtos sobre o que a psicanálise escuta no amor, na saudade, no trabalho e em tudo aquilo que se repete. <em class="txf-cafe-t">Textos para pensar tomando um cafezinho.</em></p>'
                f'<a class="pill pill-line" href="textos.html">Todos os textos <span aria-hidden="true">→</span></a></div>'
                f'<div class="txf-cards">{body}<a class="pill pill-line txf-m" href="textos.html">Todos os textos <span aria-hidden="true">→</span></a></div></div><img class="xicara" src="xicara.webp" alt="" width="520" height="499" loading="lazy"></section>')
-        FEAT = """.tx-feat{padding:clamp(64px,8vw,112px) 0}
+        FEAT = """.tx-feat{padding:clamp(64px,8vw,112px) 0;background-image:linear-gradient(90deg,rgba(242,235,224,.6),rgba(242,235,224,.35) 40%,rgba(242,235,224,0) 60%),url(tex_textos.jpg);background-size:cover,cover;background-position:center,center}
 .txf{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:clamp(32px,5vw,72px);align-items:center}
-.tx-home .eb{color:var(--prof)}.tx-home .eb::after{background:var(--prof)}
+.tx-home .eb{color:var(--prof);font-size:12px}.tx-home .eb::after{background:var(--prof)}
 .txc-main{padding:34px 34px 30px}
 .txc-q{margin:0 0 22px;padding-bottom:20px;border-bottom:1px solid var(--line);font-family:var(--display);font-style:italic;font-size:clamp(21px,2.2vw,26px);line-height:1.35;color:var(--terra)}
 .txf-intro h2{font-family:var(--display);font-weight:400;font-size:clamp(36px,4.6vw,56px);line-height:1.05;margin:6px 0 18px}
@@ -227,7 +238,7 @@ if(navigator.clipboard)navigator.clipboard.writeText(u).then(ok,function(){{prom
 .txc{display:block;text-decoration:none;color:var(--ink);background:rgba(251,248,243,.94);padding:26px 28px;box-shadow:0 18px 40px rgba(30,39,52,.14);border-left:3px solid var(--terra);transition:transform .25s ease,box-shadow .25s ease}
 .txc:hover{transform:translateY(-3px);box-shadow:0 24px 50px rgba(30,39,52,.2)}
 .txc h3{font-family:var(--display);font-weight:400;font-size:clamp(22px,2.2vw,27px);line-height:1.2;margin:10px 0 8px}
-.txc p{font-size:15.5px;line-height:1.6;color:var(--muted);margin:0}
+.txc p{font-size:16px;line-height:1.6;color:#3F3A35;margin:0}
 .txf-m{display:none}
 .txf-cafe-t{display:block;margin-top:10px;font-style:italic;color:var(--terra)}
 .tx-feat{position:relative;overflow:hidden}.tx-feat .wrap{position:relative;z-index:1}

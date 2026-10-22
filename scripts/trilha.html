@@ -33,3 +33,7 @@ document.addEventListener("click",function(e){if(a.paused||e.defaultPrevented||e
  if(u.pathname===location.pathname&&u.hash)return;e.preventDefault();go(u.href,true)});
 addEventListener("popstate",function(){if(!a.paused)go(location.href,false);else location.reload()});
 })();</script>
+<script data-persist>(function(){if(window.__trHide)return;window.__trHide=1;var t,last=0;
+addEventListener("scroll",function(){if(innerWidth>760)return;var b=document.querySelector(".trilha");if(!b||b.classList.contains("on"))return;
+var y=scrollY,end=y+innerHeight>=document.documentElement.scrollHeight-40;b.classList.toggle("tr-hide",!end&&Math.abs(y-last)>2);last=y;
+clearTimeout(t);t=setTimeout(function(){b.classList.remove("tr-hide")},900)},{passive:true});})();</script>
