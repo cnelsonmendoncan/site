@@ -456,9 +456,21 @@ main[id],section[id],div[id],article[id]{scroll-margin-top:68px}
 
 /* ===== ritmo de cores: um único creme, azul-escuro como pontuação ===== */
 body{background:#F2EBE0}
-.intro,.topics,#para-quem,#duvidas{background:#F2EBE0 url(tex_paper.jpg) center/cover!important;background-blend-mode:normal!important}
+.intro,.topics,#para-quem,#duvidas{background:#F6F1E9 url(tex_paper_light.jpg) center/cover!important;background-blend-mode:normal!important}
+body{background:#F6F1E9}
 /* segundo tom claro, bem distinto, alternando com o creme */
-.expat,#servicos{background:#F0E3D0 url(tex_paper.jpg) center/cover!important;background-blend-mode:multiply!important}
+#servicos{background:#E3EAF0 url(tex_mist.jpg) center/cover!important;background-blend-mode:normal!important}
+.expat{background:#E6D9C4 url(postal_mar.jpg) left top/100% auto no-repeat!important;background-blend-mode:normal!important}
+.expat{min-height:75vw;box-sizing:border-box;padding-top:clamp(56px,7vw,96px)!important}
+.expat .wrap{display:block;max-width:none;padding-left:calc(22.5vw + 30px);padding-right:max(24px,calc(50vw - 540px))}
+.expat-body .lead{max-width:44ch}
+.abc-more>summary{display:flex!important;align-items:center;justify-content:space-between;gap:12px;margin-top:28px;padding:14px 0;border-top:1px solid rgba(140,81,44,.25);border-bottom:1px solid rgba(140,81,44,.25);font:700 14.5px var(--body);color:#6E3D1E;cursor:pointer;list-style:none;max-width:560px}
+.abc-more>summary::-webkit-details-marker{display:none}
+.abc-more>summary::after{content:"+";font-size:22px;font-weight:400;line-height:1}
+.abc-more[open]>summary::after{content:"–"}
+.expat .strip{display:none}
+.expat-body{max-width:760px}
+@media (max-width:820px){.expat{min-height:0;background-image:url(postal_mar_m.jpg)!important;padding-top:calc(75vw + 28px)!important;background-color:#EFE7DA!important}.expat .wrap{padding-left:20px;padding-right:20px}}
 .expat .abc li,.expat .abc-more>summary{border-color:rgba(140,81,44,.22)}
 .expat .eb,.expat .abc b,.expat .abc-more>summary,#servicos .eb,#servicos .svc:not(.main) .tag,#servicos .svc:not(.main) a{color:#6E3D1E}
 /* divisória fina entre seções claras vizinhas */
@@ -477,14 +489,19 @@ body{background:#F2EBE0}
 #para-quem-e .fit li{color:#D3D7DD}
 
 /* ajustes UX */
-@media (max-width:760px){.expat,#servicos{background-color:#F3E8D8!important}}
 
-.move-grid{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr);gap:clamp(32px,6vw,88px);align-items:center}
+
+.move-grid{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:clamp(32px,6vw,88px);align-items:start;margin-top:10px}
 .move-q{margin:0;padding-left:28px;border-left:2px solid var(--terra)}
 .move-q blockquote{margin:0;font-family:var(--display);font-style:italic;font-size:clamp(26px,2.8vw,36px);line-height:1.25;color:var(--ink)}
 .move-q blockquote em{color:var(--terra)}
 .move-q figcaption{margin-top:16px;font-size:14px;color:var(--muted)}
 @media (max-width:860px){.move-grid{grid-template-columns:1fr}.move-q{margin-top:8px}}
+
+.move-map{margin:0}
+.move-map img{display:block;width:100%;max-width:420px;height:auto;margin-left:auto;box-shadow:0 22px 50px rgba(30,39,52,.22);border-radius:2px;transform:rotate(1.2deg)}
+.move-map figcaption{max-width:420px;margin:16px 0 0 auto;font-size:14px;line-height:1.5;color:var(--muted);font-style:italic}
+@media (max-width:860px){.move-map img,.move-map figcaption{margin-left:0;max-width:100%}}
 </style>
 
 <a class="skip" href="#inicio">Pular para o conteúdo</a>
@@ -537,7 +554,7 @@ body{background:#F2EBE0}
       <h2 class="reveal">Estar longe também <em>é um processo.</em></h2>
       <p class="lead" style="margin-top:18px">Viver em outro país é, ao mesmo tempo, uma conquista e uma perda. Mudar de país não é só trocar de endereço: é aprender a viver entre dois lugares, sem se sentir inteiro em nenhum deles. Com um analista brasileiro, você fala na língua em que viveu a sua história, e não precisa explicar o contexto.</p>
       <p class="sense">Às vezes é o cheiro de café passado, uma música tocando no rádio, a chuva no telhado num domingo. E, de repente, você está lá.</p>
-      <details class="abc-more" open data-mobile-closed><summary>Ler sobre o luto, o medo, a falta de chão e os vínculos</summary><ol class="abc">
+      <details class="abc-more"><summary>Ler sobre o luto, o medo, a falta de chão e os vínculos</summary><ol class="abc">
         <li><b>O luto da terra</b><p>Ficam para trás as pessoas, os cheiros, a língua, o jeito de ser entendido sem precisar explicar. É uma perda real, mesmo quando a escolha de partir foi sua.</p></li>
         <li><b>O medo e a hipervigilância</b><p>O telefone toca fora de hora e o corpo já se prepara para a pior notícia. Descansar fica cada vez mais difícil.</p></li>
         <li><b>A falta de chão</b><p>O isolamento, a adaptação constante e a sensação de estar sempre começando de novo, mesmo quando, por fora, tudo parece funcionar.</p></li>
@@ -625,10 +642,10 @@ body{background:#F2EBE0}
     <p class="eb">O que me move</p>
     <h2 class="reveal">O sintoma também <em>tem o seu preço.</em></h2>
     <div class="move-grid"><div>    <p class="lead" style="margin-top:18px">Ninguém deseja perder dinheiro, ficar em relacionamentos falidos ou desistir do que quer. Mas existe um lado nosso que trama contra o próprio desejo, e às vezes a gente escuta esse lado como se fosse a nossa vontade de verdade. Freud mostrou que todo sintoma tem os seus benefícios. O meu trabalho é mostrar o quanto ficar nele custa.</p>
-    <p class="lead" style="margin-top:12px">A vida é uma só. Que bonito seria chegar ao fim dela e ver que conseguimos realizar, ser felizes, ter momentos com quem amamos. A gente adora estar sozinho e detesta saber que depende do outro, mas foi junto que a humanidade se construiu.</p>
+    <p class="lead" style="margin-top:12px">A vida é uma só. Que bonito seria chegar ao fim dela e ver que conseguimos realizar, ser felizes, ter momentos com quem amamos. A gente adora estar sozinho e detesta saber que depende do outro, mas foi junto que a humanidade se construiu. <em style="color:var(--terra)">Sozinho você até consegue. Junto, a gente vai mais longe.</em></p>
     <p class="lead" style="margin-top:12px">E o tempo leva tempo: elaborar não é atraso, é o caminho. Trazer o inconsciente de forma bruta pode doer; por isso, cada passo vem no seu tempo.</p>
     </div>
-    <figure class="move-q reveal"><blockquote>“Sozinho você até consegue. <em>Junto, a gente vai mais longe.</em>”</blockquote><figcaption>Nelson Mendonça Neto</figcaption></figure></div>
+    <figure class="move-map reveal"><img src="cidade_psiquica.webp" alt="Mapa ilustrado de uma cidade com três regiões: id, ego e superego, ligadas por pontes e caminhos" width="900" height="1350" loading="lazy" decoding="async"><figcaption>A cidade psíquica: o id, o ego e o superego negociando o tempo todo. Às vezes, um lado nosso trama contra o outro.</figcaption></figure></div>
   </div>
 </section>
 
