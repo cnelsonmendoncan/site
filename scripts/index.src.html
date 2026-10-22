@@ -475,6 +475,16 @@ body{background:#F2EBE0}
 #para-quem-e .fit .no{background:transparent;border:1px solid rgba(242,235,224,.18);color:#D3D7DD}
 #para-quem-e .fit h3{color:var(--paper)}
 #para-quem-e .fit li{color:#D3D7DD}
+
+/* ajustes UX */
+@media (max-width:760px){.expat,#servicos{background-color:#F3E8D8!important}}
+
+.move-grid{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr);gap:clamp(32px,6vw,88px);align-items:center}
+.move-q{margin:0;padding-left:28px;border-left:2px solid var(--terra)}
+.move-q blockquote{margin:0;font-family:var(--display);font-style:italic;font-size:clamp(26px,2.8vw,36px);line-height:1.25;color:var(--ink)}
+.move-q blockquote em{color:var(--terra)}
+.move-q figcaption{margin-top:16px;font-size:14px;color:var(--muted)}
+@media (max-width:860px){.move-grid{grid-template-columns:1fr}.move-q{margin-top:8px}}
 </style>
 
 <a class="skip" href="#inicio">Pular para o conteúdo</a>
@@ -614,18 +624,11 @@ body{background:#F2EBE0}
     <span class="num">04</span>
     <p class="eb">O que me move</p>
     <h2 class="reveal">O sintoma também <em>tem o seu preço.</em></h2>
-    <p class="lead" style="margin-top:18px">Ninguém deseja perder dinheiro, ficar em relacionamentos falidos ou desistir do que quer. Mas existe um lado nosso que trama contra o próprio desejo, e às vezes a gente escuta esse lado como se fosse a nossa vontade de verdade. Freud mostrou que todo sintoma tem os seus benefícios. O meu trabalho é mostrar o quanto ficar nele custa.</p>
-    <p class="lead" style="margin-top:12px">A vida é uma só. Que bonito seria chegar ao fim dela e ver que conseguimos realizar, ser felizes, ter momentos com quem amamos. A gente adora estar sozinho e detesta saber que depende do outro, mas foi junto que a humanidade se construiu. Sozinho você até consegue. Junto, a gente vai mais longe.</p>
-    <div class="fit reveal">
-      <div class="yes"><h3>O que eu sei</h3><ul>
-        <li>se o núcleo do problema continua lá, o sintoma muda de roupa e volta de outro jeito;</li>
-        <li>é na infância que aprendemos a amar. Freud chamou parte disso de complexo de Édipo;</li>
-        <li>alguns desses aprendizados precisam ser desaprendidos.</li></ul></div>
-      <div class="no"><h3>Por isso, o meu cuidado</h3><ul>
-        <li>o tempo leva tempo: elaborar não é um atraso, é o caminho;</li>
-        <li>trazer o inconsciente de forma bruta pode doer e fazer mal;</li>
-        <li>meu objetivo é que você tenha consciência do que se passa e, a partir dela, consiga tomar novas decisões.</li></ul></div>
+    <div class="move-grid"><div>    <p class="lead" style="margin-top:18px">Ninguém deseja perder dinheiro, ficar em relacionamentos falidos ou desistir do que quer. Mas existe um lado nosso que trama contra o próprio desejo, e às vezes a gente escuta esse lado como se fosse a nossa vontade de verdade. Freud mostrou que todo sintoma tem os seus benefícios. O meu trabalho é mostrar o quanto ficar nele custa.</p>
+    <p class="lead" style="margin-top:12px">A vida é uma só. Que bonito seria chegar ao fim dela e ver que conseguimos realizar, ser felizes, ter momentos com quem amamos. A gente adora estar sozinho e detesta saber que depende do outro, mas foi junto que a humanidade se construiu.</p>
+    <p class="lead" style="margin-top:12px">E o tempo leva tempo: elaborar não é atraso, é o caminho. Trazer o inconsciente de forma bruta pode doer; por isso, cada passo vem no seu tempo.</p>
     </div>
+    <figure class="move-q reveal"><blockquote>“Sozinho você até consegue. <em>Junto, a gente vai mais longe.</em>”</blockquote><figcaption>Nelson Mendonça Neto</figcaption></figure></div>
   </div>
 </section>
 

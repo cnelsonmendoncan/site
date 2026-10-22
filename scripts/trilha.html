@@ -38,4 +38,4 @@ addEventListener("scroll",function(){if(innerWidth>760)return;var b=document.que
 var y=scrollY;b.classList.toggle("tr-hide",Math.abs(y-last)>2);last=y;
 clearTimeout(t);t=setTimeout(function(){b.classList.remove("tr-hide");chk()},900)},{passive:true});
 function chk(){var b=document.querySelector(".trilha");if(!b||innerWidth>760)return;var br=b.getBoundingClientRect(),hit=[].some.call(document.querySelectorAll("main .pill,main .btn"),function(x){var r=x.getBoundingClientRect();return r.width&&!(r.right<br.left||r.left>br.right||r.bottom<br.top||r.top>br.bottom)});b.classList.toggle("tr-hide",hit&&!b.classList.contains("on"))}
-addEventListener("load",chk);setTimeout(chk,300);})();</script>
+chk();addEventListener("load",chk);setTimeout(chk,300);})();</script>
