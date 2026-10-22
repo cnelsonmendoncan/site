@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 340" role="img" aria-hidden="true">
+  <defs>
+    <radialGradient id="cf" cx="45%" cy="40%" r="60%"><stop offset="0" stop-color="#5A3418"/><stop offset=".7" stop-color="#3B2010"/><stop offset="1" stop-color="#2A160A"/></radialGradient>
+    <radialGradient id="cr" cx="50%" cy="50%" r="50%"><stop offset=".78" stop-color="#B07A4A" stop-opacity="0"/><stop offset=".9" stop-color="#C08A57" stop-opacity=".9"/><stop offset="1" stop-color="#8C512C" stop-opacity=".6"/></radialGradient>
+    <radialGradient id="pl" cx="45%" cy="40%" r="60%"><stop offset="0" stop-color="#FBF8F3"/><stop offset="1" stop-color="#E9DFCF"/></radialGradient>
+    <filter id="sh" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="6" dy="12" stdDeviation="10" flood-color="#1E2734" flood-opacity=".22"/></filter>
+  </defs>
+  <!-- mancha de café no papel -->
+  <g fill="none" stroke="#8C512C" stroke-linecap="round" opacity=".35">
+    <path d="M70 250 a62 58 0 1 1 6 4" stroke-width="5"/>
+    <path d="M78 246 a54 50 0 1 1 -3 -6" stroke-width="1.6" opacity=".7"/>
+  </g>
+  <!-- pires -->
+  <g filter="url(#sh)">
+    <ellipse cx="270" cy="160" rx="128" ry="124" fill="url(#pl)"/>
+    <ellipse cx="270" cy="160" rx="100" ry="97" fill="none" stroke="#D6C7B2" stroke-width="2"/>
+  </g>
+  <!-- asa -->
+  <path d="M352 150 q46 -6 48 24 q2 28 -44 20" fill="none" stroke="#F4EEE5" stroke-width="16" stroke-linecap="round" filter="url(#sh)"/>
+  <!-- xícara -->
+  <g filter="url(#sh)">
+    <circle cx="270" cy="160" r="82" fill="#FBF8F3"/>
+    <circle cx="270" cy="160" r="82" fill="none" stroke="#E2D6C4" stroke-width="3"/>
+  </g>
+  <circle cx="270" cy="160" r="68" fill="url(#cf)"/>
+  <circle cx="270" cy="160" r="68" fill="url(#cr)"/>
+  <ellipse cx="248" cy="138" rx="18" ry="9" fill="#FFF" opacity=".18" transform="rotate(-30 248 138)"/>
+</svg>

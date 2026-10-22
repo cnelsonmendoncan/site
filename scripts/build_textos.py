@@ -214,7 +214,7 @@ if(navigator.clipboard)navigator.clipboard.writeText(u).then(ok,function(){{prom
                f'<div class="txf-intro"><p class="eb">Textos</p><h2 id="t-txt">A vida como ela <em>se diz.</em></h2>'
                f'<p class="txf-lead">Além dos livros, eu escrevo textos curtos sobre o que a psicanálise escuta no amor, na saudade, no trabalho e em tudo aquilo que se repete.</p>'
                f'<a class="pill pill-line" href="textos.html">Todos os textos <span aria-hidden="true">→</span></a></div>'
-               f'<div class="txf-cards">{body}<a class="pill pill-line txf-m" href="textos.html">Todos os textos <span aria-hidden="true">→</span></a></div></div></section>')
+               f'<div class="txf-cards">{body}<a class="pill pill-line txf-m" href="textos.html">Todos os textos <span aria-hidden="true">→</span></a></div></div><img class="txf-cafe" src="cafe.svg" alt="" width="420" height="340" loading="lazy"></section>')
         FEAT = """.tx-feat{padding:clamp(64px,8vw,112px) 0}
 .txf{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:clamp(32px,5vw,72px);align-items:center}
 .tx-home .eb{color:var(--prof)}.tx-home .eb::after{background:var(--prof)}
@@ -229,6 +229,12 @@ if(navigator.clipboard)navigator.clipboard.writeText(u).then(ok,function(){{prom
 .txc h3{font-family:var(--display);font-weight:400;font-size:clamp(22px,2.2vw,27px);line-height:1.2;margin:10px 0 8px}
 .txc p{font-size:15.5px;line-height:1.6;color:var(--muted);margin:0}
 .txf-m{display:none}
+.tx-feat{position:relative;overflow:hidden}.txf-intro{position:relative}
+.txf-cafe{position:absolute;right:max(16px,calc(50% - 640px));bottom:18px;width:230px;height:auto;z-index:2;pointer-events:none;animation:cafe 7s ease-in-out infinite}
+.txf-cards{position:relative;z-index:1}
+@keyframes cafe{0%,100%{transform:translateY(0) rotate(-4deg)}50%{transform:translateY(-10px) rotate(2deg)}}
+@media (prefers-reduced-motion:reduce){.txf-cafe{animation:none}}
+@media (max-width:860px){.txf-cafe{display:none}}
 @media (max-width:860px){.txf{grid-template-columns:1fr}.txf-intro .pill{display:none}.txf-m{display:flex;width:100%;justify-content:center;margin-top:22px}.txc,.txc-main{padding:24px 22px}}
 @media (prefers-reduced-motion:reduce){.txc{transition:none}.txc:hover{transform:none}}
 """
