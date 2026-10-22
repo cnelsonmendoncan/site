@@ -456,7 +456,13 @@ main[id],section[id],div[id],article[id]{scroll-margin-top:68px}
 
 /* ===== ritmo de cores: um único creme, azul-escuro como pontuação ===== */
 body{background:#F2EBE0}
-.intro,.expat,.topics,#servicos,#para-quem,#duvidas{background:#F2EBE0 url(tex_paper.jpg) center/cover!important;background-blend-mode:normal!important}
+.intro,.topics,#para-quem,#duvidas{background:#F2EBE0 url(tex_paper.jpg) center/cover!important;background-blend-mode:normal!important}
+/* segundo tom claro, bem distinto, alternando com o creme */
+.expat,#servicos{background:#F0E3D0 url(tex_paper.jpg) center/cover!important;background-blend-mode:multiply!important}
+.expat .abc li,.expat .abc-more>summary{border-color:rgba(140,81,44,.22)}
+.expat .eb,.expat .abc b,.expat .abc-more>summary,#servicos .eb,#servicos .svc:not(.main) .tag,#servicos .svc:not(.main) a{color:#6E3D1E}
+/* divisória fina entre seções claras vizinhas */
+.intro + .expat,.banner-band + #servicos{box-shadow:inset 0 1px 0 rgba(140,81,44,.18)}
 #servicos .svc:not(.main){background:#FBF8F3}
 .topics .tcard{background:#FBF8F3}
 .banner-band{height:clamp(140px,18vw,220px)!important}
