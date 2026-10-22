@@ -1,24 +1,24 @@
 ---
-title: Por que eu sempre me apaixono pelo mesmo tipo de pessoa?
-date: 2026-10-21
-resumo: Os nomes mudam, as cidades mudam, mas em algum momento você reconhece a cena. A psicanálise tem um nome para esse retorno do mesmo.
-citacao: A cena já não precisa ser repetida, porque pode ser falada.
+title: O seu dedo podre tem os benefícios dele
+date: 2026-10-22
+resumo: Em uma semana, eles estão apaixonadíssimos. Eu, como psicanalista, fico de olho no que vem depois.
+citacao: Todo sintoma tem um benefício secundário. Por isso é preciso muito desejo para sair da inércia dos relacionamentos difíceis.
 rascunho: false
 ---
-Os nomes mudam, as cidades mudam, às vezes até o jeito de se vestir. Mas em algum momento você reconhece a cena. A mesma distância, a mesma espera, o mesmo final. E vem aquela frase, meio piada, meio desabafo: "eu tenho dedo podre".
+Isso me faz lembrar das histórias de uma amiga. De vez em quando ela conversa com alguns rapazes e decide se relacionar. E eu sempre digo que é bacana se relacionar, até porque, quando a gente se relaciona, a gente se dá a oportunidade de se encontrar, de olhar como a gente mesmo se comporta.
 
-Escuto essa frase com frequência, e confesso que gosto dela. Quem diz isso já percebeu alguma coisa. Só ainda não sabe o quê.
+Em uma semana, eles estão apaixonadíssimos. É um *must* na rodinha de amigos: ela contando sobre ele, que é um homem superinteligente, que faz tudo, que quer ajudar em tudo. Mas assim… eu, como psicanalista, fico de olho no que vem depois. Na minha cabeça, fico pensando: está entregando tanto, a troco de quê? Lógico que ela é superbacana, mas eu ficaria com um pé atrás numa paixão tão intensa em uma semana.
 
-A psicanálise tem um nome para esse retorno do mesmo: repetição. Freud notou, há mais de cem anos, que a gente tende a repetir aquilo que não consegue lembrar. Não como castigo, nem como falta de sorte, mas como uma tentativa. Algo da nossa história ficou sem palavra, e o que fica sem palavra costuma voltar em ato. Volta na escolha de quem a gente ama, no lugar que a gente ocupa na relação, no ponto exato em que tudo desanda.
+Pouco tempo depois, ela me conta que ele quer que ela se afaste de algumas pessoas. (Aí eu penso: eu bem que avisei… pra mim mesmo.) E, como bom amigo, digo: "Nossa, que estranho, né? Vocês tão tranquilos juntos, e ele fica assim tão inseguro. Pra quê?" Infelizmente, nunca vamos saber 100% o que se passa na cabeça do outro. Mas ela segue conversando com ele e diz que vai continuar tentando.
 
-Pensa em alguém que cresceu tendo que conquistar a atenção de um pai ou de uma mãe que estava sempre um pouco longe. Essa pessoa pode passar a vida se encantando justamente por quem nunca está inteiro ali. Quem está disponível parece sem graça, e quem está indisponível parece promessa. Cada nova relação vira, sem que ela saiba, uma nova chance de finalmente ganhar o amor que faltou lá atrás. Só que a cena é montada de um jeito em que o final já está escrito.
+O que acontece é que esses relacionamentos tomam muito tempo de vida. Tomam o tempo com os amigos, com a família, nas reuniões, porque a gente acaba se preocupando, muitas vezes, com alguém que não vai se encaixar, e que, pelo menos na minha cabeça, já estava na cara desde o início. Ela, superaudaciosa. Ele, querendo controle. Já viu!
 
-Esse é só um exemplo. Cada um repete do seu jeito. Tem quem sempre escolha alguém de quem cuidar, quem sempre escolha alguém que vai criticar, quem sempre vá embora antes de ser deixado. A história muda de pessoa para pessoa. O que se mantém é a insistência.
+Mas, quando eu escuto as histórias dela, eu escuto um padrão. Um padrão de homens que tentam controlá-la, e ninguém consegue. Só que a graça disso tudo é que os dois gostam desse jogo de gato e rato.
 
-Por isso eu desconfio um pouco de conselhos como "é só parar de escolher esse tipo de gente". Se fosse questão de força de vontade, a lista de ex não seria tão parecida. A escolha amorosa passa pelo desejo, e o desejo tem raízes que a gente não vê.
+O que ela pode fazer? Uma análise bem feita.
 
-Na análise, o trabalho não é ensinar a pessoa a escolher melhor, como se houvesse um manual. É escutar o que essa repetição está tentando dizer. Que lugar você costuma ocupar nessas histórias? O que você espera que o outro finalmente faça? Em que momento você percebe que já viveu aquilo antes? Quando essas perguntas começam a ganhar palavra, alguma coisa se desloca. A cena já não precisa ser repetida, porque pode ser falada.
+Mas a análise, por si só, não é garantia de que ela vá ter bons relacionamentos. E, quando eu digo bons, digo relacionamentos tranquilos, que te permitem seguir suas metas de vida, em que vocês conseguem se conhecer, saber quem são, sem necessariamente entrar em conflito o tempo todo.
 
-Isso não acontece de uma vez. Às vezes a pessoa ainda se apaixona pelo mesmo tipo, mas percebe mais cedo. Às vezes fica, mas de outro jeito. Às vezes, pela primeira vez, acha interessante alguém que antes parecia sem graça. São mudanças pequenas por fora e enormes por dentro.
+E assim… discussão todo casal tem, e é importante: atualiza o relacionamento. Mas tem um limite, e ele precisa ser visto.
 
-Então, se você já se perguntou por que sempre cai na mesma história, talvez a pergunta seja melhor do que parece. Ela não quer dizer que você tem azar no amor. Quer dizer que algo em você está pedindo para ser escutado.
+Ela tem um dedinho podre. Mas não sei se ela está preparada para largar esse dedo podre. Todo sintoma, e o dedo podre é um sintoma, tem um benefício secundário. É isso. Por isso, é preciso ter muito desejo para sair dessa inércia dos relacionamentos difíceis.
