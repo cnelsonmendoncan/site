@@ -196,12 +196,12 @@ def main():
   <img class="art-xic" src="xicara.webp" alt="" width="520" height="499">
 </div></div>
 <section class="art"><div class="wrap">
-  <header class="jn">
+  <div class="jn">
     <p class="jn-col"><span>Coluna</span><b>A vida como ela se diz</b><span>nelsonmendonca.com</span></p>
     <h1>{esc(p["title"])}</h1>
     <p class="jn-dek">{esc(p["resumo"])}</p>
     <p class="jn-by">Por <b>Nelson Mendonça Neto</b>, psicólogo e psicanalista <span aria-hidden="true">·</span> <time datetime="{p["date"].isoformat()}">{br(p["date"])}</time> <span aria-hidden="true">·</span> {p["min"]} min de leitura</p>
-  </header>
+  </div>
   <div class="art-body jn-body">{with_quote(p)}</div>
   <p class="art-sign"><b>Nelson Mendonça Neto</b>Psicólogo e psicanalista · CRP 19/3888</p>
   <div class="art-share"><span>Compartilhar</span><a href="{share}" target="_blank" rel="noopener">WhatsApp</a><button type="button" class="copy" data-url="{url}">Copiar link</button></div>

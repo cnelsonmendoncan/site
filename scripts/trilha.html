@@ -26,7 +26,7 @@ function go(url,push){return fetch(url,{credentials:"same-origin"}).then(functio
  [].slice.call(d.body.children).forEach(function(c){if(c.hasAttribute("data-persist"))return;document.body.insertBefore(document.importNode(c,true),keep)});
  if(push)history.pushState({p:1},"",url);run(document.body);
  var u=new URL(url,location.href),t=u.hash&&document.getElementById(u.hash.slice(1));
- if(t)t.scrollIntoView();else scrollTo(0,0);ui();
+ if(t){[].forEach.call(document.querySelectorAll(".reveal"),function(e){e.classList.add("on")});var se=document.documentElement.style.scrollBehavior;document.documentElement.style.scrollBehavior="auto";t.scrollIntoView();document.documentElement.style.scrollBehavior=se}else scrollTo(0,0);ui();
  var m=document.querySelector("main");if(m)m.focus({preventScroll:true});}).catch(function(){location.href=url})}
 document.addEventListener("click",function(e){if(a.paused||e.defaultPrevented||e.button||e.metaKey||e.ctrlKey||e.shiftKey||e.altKey)return;
  var l=e.target.closest&&e.target.closest("a[href]");if(!l||l.target||l.hasAttribute("download"))return;var u=new URL(l.href,location.href);if(!local(u))return;
@@ -35,5 +35,7 @@ addEventListener("popstate",function(){if(!a.paused)go(location.href,false);else
 })();</script>
 <script data-persist>(function(){if(window.__trHide)return;window.__trHide=1;var t,last=0;
 addEventListener("scroll",function(){if(innerWidth>760)return;var b=document.querySelector(".trilha");if(!b||b.classList.contains("on"))return;
-var y=scrollY,end=y+innerHeight>=document.documentElement.scrollHeight-40;b.classList.toggle("tr-hide",!end&&Math.abs(y-last)>2);last=y;
-clearTimeout(t);t=setTimeout(function(){b.classList.remove("tr-hide")},900)},{passive:true});})();</script>
+var y=scrollY;b.classList.toggle("tr-hide",Math.abs(y-last)>2);last=y;
+clearTimeout(t);t=setTimeout(function(){b.classList.remove("tr-hide");chk()},900)},{passive:true});
+function chk(){var b=document.querySelector(".trilha");if(!b||innerWidth>760)return;var br=b.getBoundingClientRect(),hit=[].some.call(document.querySelectorAll("main .pill,main .btn"),function(x){var r=x.getBoundingClientRect();return r.width&&!(r.right<br.left||r.left>br.right||r.bottom<br.top||r.top>br.bottom)});b.classList.toggle("tr-hide",hit&&!b.classList.contains("on"))}
+addEventListener("load",chk);setTimeout(chk,300);})();</script>

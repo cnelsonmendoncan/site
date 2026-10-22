@@ -415,6 +415,35 @@ nav a,header .btn{white-space:nowrap}
 /* ===== v30: Atendimentos com fundo próprio (Acolhimento claro) ===== */
 #servicos{background:#E9DCD5 url(tex_paper.jpg) center/cover;background-blend-mode:multiply}
 #servicos .svc:not(.main){background:#FCF8F4}
+
+/* ===== ajustes mobile (paciente) ===== */
+.abc-more>summary{display:none}
+@media (max-width:760px){
+ .abc-more>summary{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:28px;padding:14px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);font:700 14.5px var(--body);color:var(--terra);cursor:pointer;list-style:none}
+ .abc-more>summary::-webkit-details-marker{display:none}
+ .abc-more>summary::after{content:"+";font-size:22px;font-weight:400;line-height:1}
+ .abc-more[open]>summary::after{content:"–"}
+ .abc-more .abc{margin-top:18px}
+ /* temas em carrossel horizontal */
+ .tgrid6{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-left:20px;gap:12px;margin:28px -20px 0;padding:0 20px 12px;-webkit-overflow-scrolling:touch}
+ .tgrid6 .tcard{flex:0 0 78%;scroll-snap-align:start}
+ /* faixas decorativas mais baixas */
+ .expat .strip{height:90px!important}
+ .banner-band{height:120px!important}
+ .expat,.slogan,#primeiro-encontro{padding-bottom:calc(56px + 48px)!important}
+ .expat::after,.slogan::after,#primeiro-encontro::after{height:48px!important;background-size:auto 48px!important}
+}
+.tgrid-hint{display:none}
+@media (max-width:760px){.tgrid-hint{display:block;margin-top:6px;font-size:13px;color:var(--muted)}}
+
+/* menu do celular: compacto, rola por dentro, trava o fundo */
+@media (max-width:900px){
+ .menu .menu-panel{max-height:calc(100svh - 68px);overflow-y:auto;overscroll-behavior:contain;padding-bottom:24px}
+ .menu .menu-panel a{font-size:16.5px;padding:12px 0}
+ .menu .menu-sep{margin-top:18px}
+ .menu .menu-sep:first-child{margin-top:6px}
+ html.menu-open,html.menu-open body{overflow:hidden}
+}
 </style>
 
 <a class="skip" href="#inicio">Pular para o conteúdo</a>
@@ -429,7 +458,7 @@ nav a,header .btn{white-space:nowrap}
       <a class="hide-m" href="pagamento.html">Como começar</a>
       <a class="hide-m" href="cursos.html">Cursos</a>
       <details class="menu"><summary aria-label="Abrir menu"><span class="hb" aria-hidden="true"><i></i><i></i><i></i></span></summary><div class="menu-panel">
-        <a href="#expatriados">Brasileiros no exterior</a><a href="#servicos">Atendimentos</a><a href="#primeiro-encontro">Como é uma sessão</a><a href="#sobre">Sobre</a><a href="#duvidas">Dúvidas frequentes</a><a href="#contato">Contato</a><span class="menu-sep" aria-hidden="true">Páginas</span><a href="livros.html">Livros e textos</a><a href="pagamento.html">Como começar</a><span class="menu-sep" aria-hidden="true">Para colegas</span><a href="cursos.html">Cursos e palestras</a></div></details>
+        <span class="menu-sep" aria-hidden="true">Nesta página</span><a href="#expatriados">Brasileiros no exterior</a><a href="#servicos">Atendimentos</a><a href="#primeiro-encontro">Como é uma sessão</a><a href="#sobre">Sobre</a><a href="#duvidas">Dúvidas frequentes</a><a href="#contato">Contato</a><span class="menu-sep" aria-hidden="true">Leituras</span><a href="livros.html">Livros e textos</a><span class="menu-sep" aria-hidden="true">Para colegas</span><a href="cursos.html">Cursos e palestras</a><a class="menu-cta" href="pagamento.html">Como começar →</a></div></details>
       <a class="btn btn-dark" href="pagamento.html">Quero começar</a>
     </nav>
   </div>
@@ -466,12 +495,12 @@ nav a,header .btn{white-space:nowrap}
       <h2 class="reveal">Estar longe também <em>é um processo.</em></h2>
       <p class="lead" style="margin-top:18px">Viver em outro país é, ao mesmo tempo, uma conquista e uma perda. Mudar de país não é só trocar de endereço: é aprender a viver entre dois lugares, sem se sentir inteiro em nenhum deles. Com um analista brasileiro, você fala na língua em que viveu a sua história, e não precisa explicar o contexto.</p>
       <p class="sense">Às vezes é o cheiro de café passado, uma música tocando no rádio, a chuva no telhado num domingo. E, de repente, você está lá.</p>
-      <ol class="abc">
+      <details class="abc-more" open data-mobile-closed><summary>Ler sobre o luto, o medo, a falta de chão e os vínculos</summary><ol class="abc">
         <li><b>O luto da terra</b><p>Ficam para trás as pessoas, os cheiros, a língua, o jeito de ser entendido sem precisar explicar. É uma perda real, mesmo quando a escolha de partir foi sua.</p></li>
         <li><b>O medo e a hipervigilância</b><p>O telefone toca fora de hora e o corpo já se prepara para a pior notícia. Descansar fica cada vez mais difícil.</p></li>
         <li><b>A falta de chão</b><p>O isolamento, a adaptação constante e a sensação de estar sempre começando de novo, mesmo quando, por fora, tudo parece funcionar.</p></li>
         <li><b>Amor e vínculos à distância</b><p>Relacionamentos que mudam com a mudança, famílias que ficaram, amizades que precisam ser refeitas do zero.</p></li>
-      </ol>
+      </ol></details>
       <p class="quote">Estar longe não precisa ser estar sozinho.</p>
       <div class="ctas"><a class="pill pill-dark" href="pagamento.html">Quero começar <span aria-hidden="true">→</span></a><a class="pill pill-line" href="https://wa.me/5579996041731?text=Ol%C3%A1%2C%20Nelson.%20Vim%20pelo%20site%20e%20vivo%20no%20exterior%20e%20queria%20tirar%20uma%20d%C3%BAvida%20sobre%20fuso%20e%20pagamento." target="_blank" rel="noopener">Dúvidas sobre fuso e pagamento</a></div>
     </div>
@@ -500,7 +529,7 @@ nav a,header .btn{white-space:nowrap}
     <p class="eb">Fale comigo</p>
     <h2 class="reveal">Você está passando <em>pelo quê?</em></h2>
     <p class="lead" style="margin-top:16px">Estes são alguns dos temas que mais chegam ao consultório. Se algum deles fala de você, saiba que há lugar para ele aqui.</p>
-    <div class="tgrid tgrid6 reveal">
+    <div class="tgrid tgrid6 reveal" tabindex="0" role="region" aria-label="Temas que chegam ao consultório">
       <article class="tcard t2"><span class="tag">Migração</span><h3>Luto migratório</h3><p>Saudade, pertencimento, culpa por ter partido, a vida entre dois lugares.</p></article>
       <article class="tcard t2"><span class="tag">No exterior</span><h3>Solidão no exterior</h3><p>Uma rotina que funciona, mas ninguém por perto que conheça a sua história.</p></article>
       <article class="tcard t1"><span class="tag">Relações</span><h3>Perder um relacionamento</h3><p>Separação, término ou divórcio: quando a vida a dois acaba e é preciso se reencontrar.</p></article>
@@ -508,6 +537,7 @@ nav a,header .btn{white-space:nowrap}
       <article class="tcard t3"><span class="tag">Vínculos</span><h3>Dificuldade em me relacionar</h3><p>Afastar quem se aproxima, se calar para evitar conflito, sentir-se sozinho entre os outros.</p></article>
       <article class="tcard t4"><span class="tag">Outro motivo</span><h3>Ainda não sei dizer</h3><p>Algo não vai bem, mas é difícil colocar em palavras. Tudo bem: a gente começa por aí.</p></article>
     </div>
+    <p class="tgrid-hint" aria-hidden="true">Arraste para o lado para ver mais →</p>
   </div>
 </section>
 
@@ -590,6 +620,7 @@ nav a,header .btn{white-space:nowrap}
     <details><summary>Quanto tempo dura cada sessão e com que frequência?</summary><p>A frequência é combinada na entrevista inicial, em geral uma ou duas vezes por semana. A duração e os horários são conversados junto, considerando o seu fuso.</p></details>
     <details><summary>Quais as formas de pagamento?</summary><p>Pix ou PayPal, para quem está no Brasil, e PayPal ou Wise para brasileiros no exterior, com cobrança na moeda do seu país. <a href="pagamento.html">Veja como funciona o início</a>.</p></details>
     <details><summary>E se eu estiver em crise?</summary><p>A análise não é atendimento de urgência. Em crise, procure o CVV (188, 24 horas) ou o SAMU (192). No exterior, o serviço de emergência do país onde você está.</p></details>
+    <details><summary>Quanto custa?</summary><p>O valor da entrevista inicial é informado quando você agenda. O do acompanhamento é combinado com você na própria entrevista, de forma individual. <a href="pagamento.html">Veja como funciona o início</a>.</p></details>
     <details><summary>O que é a entrevista inicial?</summary><p>É o primeiro passo do trabalho: um encontro dedicado a compreender a sua demanda, escutar o seu momento e avaliar juntos a viabilidade de darmos início ao processo analítico. <a href="pagamento.html">Saiba como funciona</a>.</p></details>
     <details><summary>Como começar?</summary><p>Tudo começa por uma entrevista inicial. <a href="pagamento.html">Veja como funciona e agende a sua</a>.</p></details>
   </div>
@@ -613,6 +644,7 @@ nav a,header .btn{white-space:nowrap}
   </div>
 </section>
 </main>
+<script>(function(){if(innerWidth<=760)[].forEach.call(document.querySelectorAll("details[data-mobile-closed]"),function(d){d.removeAttribute("open")})})();</script>
 <footer><div class="wrap"><span>Nelson Mendonça Neto · Psicólogo e Psicanalista · CRP 19/3888</span><span>Psicanálise online para brasileiros no exterior e adultos no Brasil</span></div></footer>
 <script>
 (function(){
@@ -645,7 +677,7 @@ els.forEach(function(e){var r=e.getBoundingClientRect();if(r.top<innerHeight)e.c
 </script>
 
 <script>(function(){var m=document.querySelector(".menu");if(!m)return;var sm=m.querySelector("summary");
-function sync(){sm.setAttribute("aria-label",m.open?"Fechar menu":"Abrir menu");sm.setAttribute("aria-expanded",m.open?"true":"false")}
+function sync(){sm.setAttribute("aria-label",m.open?"Fechar menu":"Abrir menu");sm.setAttribute("aria-expanded",m.open?"true":"false");document.documentElement.classList.toggle("menu-open",m.open)}
 m.addEventListener("toggle",sync);sync();
 m.querySelectorAll("a").forEach(function(a){a.addEventListener("click",function(){m.removeAttribute("open")})});
 document.addEventListener("click",function(e){if(m.open&&!m.contains(e.target))m.removeAttribute("open")});
