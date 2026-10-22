@@ -96,7 +96,7 @@ out=full[:a]+main+full[b:]
 out=out.replace("</style>",css+"</style>",1)
 out=re.sub(r'href="#(?!")', 'href="index.html#', out)
 out=out.replace('<title>Nelson Mendonça Neto · Psicanálise</title>','<title>Sobre · Nelson Mendonça Neto</title>')
-out=out.replace('<a class="hide-m" href="sobre.html">Sobre</a>','<a class="hide-m" href="sobre.html" aria-current="page" style="color:var(--acol)">Sobre</a>')
+out=out.replace('<a class="hide-m" href="index.html#sobre">Sobre</a>','<a class="hide-m" href="index.html#sobre" aria-current="page" style="color:var(--acol)">Sobre</a>').replace('<a class="hide-m" href="#sobre">Sobre</a>','<a class="hide-m" href="index.html#sobre" aria-current="page" style="color:var(--acol)">Sobre</a>')
 out=re.sub(r'<script type="application/ld\+json">.*?</script>\n?','',out,flags=re.S)
 out=out.replace('<link rel="canonical" href="https://nelsonmendonca.com/">','<link rel="canonical" href="https://nelsonmendonca.com/sobre">')
 out=out.replace('<meta property="og:url" content="https://nelsonmendonca.com/">','<meta property="og:url" content="https://nelsonmendonca.com/sobre">')
