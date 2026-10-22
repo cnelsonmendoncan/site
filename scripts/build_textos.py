@@ -139,7 +139,7 @@ def main():
   <h1>A vida como ela <em>se diz.</em></h1>
   <p class="tx-lead">O que a psicanálise escuta no amor, na saudade, no trabalho e em tudo aquilo que se repete. Textos curtos, para ler com calma.</p>
 </div></section>
-<section class="tx-list" aria-label="Todos os textos"><div class="wrap">{lst}</div></section>
+<section class="tx-list tx-home" aria-label="Todos os textos"><div class="wrap">{lst}</div></section>
 </main>'''
     open("deploy/textos.html", "w", encoding="utf-8").write(page(full, m, SEC + " · Textos de Nelson Mendonça Neto",
         "Textos do psicanalista Nelson Mendonça Neto sobre amor, repetição, saudade e o que a psicanálise escuta na vida de todo dia.", "/textos"))
@@ -206,7 +206,7 @@ if(navigator.clipboard)navigator.clipboard.writeText(u).then(ok,function(){{prom
             body = f'<ul class="tx-items">{items}</ul>{more}'
         else:
             body = '<p class="tx-empty">Os primeiros textos chegam em breve.</p>'
-        sec = (f'<section class="lv-sec lv-alt" id="textos" aria-labelledby="t-txt"><div class="wrap"><p class="eb">Textos</p>'
+        sec = (f'<section class="lv-sec lv-alt tx-home" id="textos" aria-labelledby="t-txt"><div class="wrap"><p class="eb">Textos</p>'
                f'<h2 id="t-txt">A vida como ela <em>se diz.</em></h2>'
                f'<p class="lv-hint" style="margin-top:-14px">O que a psicanálise escuta no amor, na saudade, no trabalho e em tudo aquilo que se repete.</p>{body}</div></section>')
         lv = lv.replace("<!--TEXTOS-->", sec).replace("</style>", CSS + ".lv-sec .tx-item h3{font-family:var(--display);font-weight:400;font-size:clamp(22px,2.4vw,28px);line-height:1.2;margin:10px 0}.tx-all{margin-top:30px}</style>", 1)
