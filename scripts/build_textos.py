@@ -47,8 +47,30 @@ def load():
 
 CSS = '''
 /* ===== A vida como ela se diz ===== */
-.art-body .art-pull{margin:1.8em 0;padding:26px 0;border:0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);text-align:center}
-.art-body .art-pull p{margin:0;font-style:italic;font-size:clamp(23px,2.4vw,29px);line-height:1.35;color:var(--terra)}
+/* --- coluna de jornal --- */
+.art-aq{position:relative;overflow:hidden;background:#E3D0B8 url(tex_textos.jpg) center 35%/cover;padding:22px 0 0;height:clamp(150px,18vw,230px)}
+.art-aq .crumb{display:flex;flex-wrap:wrap;gap:10px;font-size:13px;color:#4F4A45}.art-aq .crumb a{color:var(--terra);text-decoration:none;font-weight:700}
+.art-xic{position:absolute;right:max(-40px,calc(50% - 640px));top:-60px;width:clamp(200px,24vw,330px);height:auto;filter:drop-shadow(10px 16px 18px rgba(30,39,52,.28));animation:xic 8s ease-in-out infinite;pointer-events:none}
+@keyframes xic{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-8px) rotate(-2deg)}}
+@media (prefers-reduced-motion:reduce){.art-xic{animation:none}}
+@media (max-width:760px){.art-aq{height:150px}.art-xic{width:150px;right:-36px;top:-26px}.art-aq .crumb{max-width:62%}.art-aq .crumb a[href="livros.html"],.art-aq .crumb a[href="livros.html"]+span{display:none}}
+.tx .art{padding-top:0}
+.jn{max-width:720px;margin:-56px auto 0;position:relative;background:#FBF8F3;padding:34px clamp(20px,4vw,40px) 26px;text-align:center}
+.jn-col{display:flex;justify-content:space-between;align-items:center;gap:12px;border-top:3px double var(--ink);border-bottom:1px solid var(--ink);padding:8px 0;margin:0 0 30px;font:700 11px var(--body);letter-spacing:.22em;text-transform:uppercase;color:var(--muted)}
+.jn-col b{font-family:var(--display);font-style:italic;font-weight:400;font-size:clamp(17px,2vw,22px);letter-spacing:0;text-transform:none;color:var(--terra)}
+@media (max-width:560px){.jn-col span{display:none}.jn-col{justify-content:center}}
+.jn h1{font-family:var(--display);font-weight:400;font-size:clamp(34px,5vw,58px);line-height:1.06;letter-spacing:-.015em;color:var(--ink);margin:0 auto;max-width:18ch}
+.jn-dek{font-family:var(--display);font-style:italic;font-size:clamp(19px,2vw,23px);line-height:1.45;color:#4A4038;margin:18px auto 0;max-width:40ch}
+.jn-by{margin:24px 0 0;padding-top:16px;border-top:1px solid var(--line);font-size:13.5px;color:var(--muted)}.jn-by b{color:var(--ink)}
+.jn-body{margin-top:30px}
+.jn-body>p:first-of-type::first-letter{float:left;font-size:4.1em;line-height:.82;padding:6px 10px 0 0;color:var(--terra);font-weight:500}
+.art-body .art-pull{margin:2em 0;padding:30px 28px 24px;border:0;border-top:3px double var(--ink);border-bottom:1px solid var(--ink);background:#F3EBDF;text-align:center;position:relative}
+.art-body .art-pull .pq-mark{display:block;font-family:var(--display);font-size:64px;line-height:.5;color:var(--terra);margin-bottom:6px}
+.art-body .art-pull blockquote{margin:0;padding:0;border:0}
+.art-body .art-pull blockquote p{margin:0;font-style:italic;font-size:clamp(23px,2.5vw,30px);line-height:1.35;color:var(--ink)}
+.art-body .art-pull figcaption{margin-top:18px;font:600 12px var(--body);letter-spacing:.06em;color:var(--terra)}
+.art-body .art-pull figcaption b{font-weight:700}
+
 .tx-hero{background:var(--prof) url(tex_navy.jpg) center/cover;color:var(--paper);padding:clamp(56px,8vw,110px) 0 clamp(48px,6vw,80px)}
 .tx-hero .crumb{display:flex;flex-wrap:wrap;gap:10px;font-size:13px;color:#9AA3AF;margin-bottom:26px}
 .tx-hero .crumb a{color:var(--acol);text-decoration:none;font-weight:700}
@@ -124,7 +146,8 @@ def with_quote(p):
     if not p["cit"]: return h
     paras = [x for x in re.split(r'(?<=</p>)', h) if x.strip()]
     k = max(1, len(paras) // 2)
-    q = '<blockquote class="art-pull"><p>“' + esc(p["cit"].strip(chr(8220)+chr(8221)+chr(34)+" ")) + '”</p></blockquote>'
+    q = ('<figure class="art-pull"><span class="pq-mark" aria-hidden="true">“</span><blockquote><p>' + esc(p["cit"].strip(chr(8220)+chr(8221)+chr(34)+" ")) + '</p></blockquote>'
+         '<figcaption><b>Nelson Mendonça Neto</b> · A vida como ela se diz · nelsonmendonca.com</figcaption></figure>')
     return "".join(paras[:k]) + q + "".join(paras[k:])
 
 def card(p, tag="h3"):
@@ -168,14 +191,18 @@ def main():
                     f'<div class="tx-cards n{len(others)}">' + "".join(card(q) for q in others) + '</div></div></section>')
         m = f'''<main id="inicio" class="tx" tabindex="-1">
 <article>
-<div class="tx-hero art-hero"><div class="wrap">
+<div class="art-hero art-aq"><div class="wrap">
   <nav class="crumb" aria-label="Você está em"><a href="index.html">← Início</a><span aria-hidden="true">/</span><a href="livros.html">Livros e textos</a><span aria-hidden="true">/</span><a href="textos.html">{SEC}</a></nav>
-  <p class="eb">{SEC}</p>
-  <h1>{esc(p["title"])}</h1>
-  <span class="tx-meta"><time datetime="{p["date"].isoformat()}">{br(p["date"])}</time> · {p["min"]} min de leitura</span>
+  <img class="art-xic" src="xicara.webp" alt="" width="520" height="499">
 </div></div>
 <section class="art"><div class="wrap">
-  <div class="art-body">{with_quote(p)}</div>
+  <header class="jn">
+    <p class="jn-col"><span>Coluna</span><b>A vida como ela se diz</b><span>nelsonmendonca.com</span></p>
+    <h1>{esc(p["title"])}</h1>
+    <p class="jn-dek">{esc(p["resumo"])}</p>
+    <p class="jn-by">Por <b>Nelson Mendonça Neto</b>, psicólogo e psicanalista <span aria-hidden="true">·</span> <time datetime="{p["date"].isoformat()}">{br(p["date"])}</time> <span aria-hidden="true">·</span> {p["min"]} min de leitura</p>
+  </header>
+  <div class="art-body jn-body">{with_quote(p)}</div>
   <p class="art-sign"><b>Nelson Mendonça Neto</b>Psicólogo e psicanalista · CRP 19/3888</p>
   <div class="art-share"><span>Compartilhar</span><a href="{share}" target="_blank" rel="noopener">WhatsApp</a><button type="button" class="copy" data-url="{url}">Copiar link</button></div>
   <div class="art-cta"><p>Se este texto falou de você, a análise pode ser um lugar para isso.</p><a class="pill" href="pagamento.html">Quero começar <span aria-hidden="true">→</span></a></div>
