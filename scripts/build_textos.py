@@ -102,7 +102,7 @@ def page(full, main, title, desc, path, ld=None, og_type="website"):
     out = full[:full.index('<main id="inicio"')] + main + full[full.index('</main>') + 7:]
     out = out.replace("</style>", CSS + "</style>", 1)
     out = re.sub(r'href="#(?!")', 'href="index.html#', out)
-    out = out.replace('<a class="hide-m" href="textos.html">Textos</a>', '<a class="hide-m" href="textos.html" aria-current="page" style="color:var(--acol)">Textos</a>')
+    out = out.replace('<a class="hide-m" href="livros.html">Livros e textos</a>', '<a class="hide-m" href="livros.html" aria-current="page" style="color:var(--acol)">Livros e textos</a>')
     out = re.sub(r'<script type="application/ld\+json">.*?</script>\n?', '', out, flags=re.S)
     if ld: out = out.replace("</head>", '<script type="application/ld+json">' + json.dumps(ld, ensure_ascii=False) + "</script>\n</head>", 1)
     out = re.sub(r"<title>.*?</title>", "<title>" + esc(title) + "</title>", out, count=1, flags=re.S)
@@ -133,7 +133,7 @@ def main():
         lst = '<p class="tx-empty">Os primeiros textos chegam em breve.</p>'
     m = f'''<main id="inicio" class="tx" tabindex="-1">
 <section class="tx-hero"><div class="wrap">
-  <nav class="crumb" aria-label="Você está em"><a href="index.html">← Início</a><span aria-hidden="true">/</span><span>Textos</span></nav>
+  <nav class="crumb" aria-label="Você está em"><a href="index.html">← Início</a><span aria-hidden="true">/</span><a href="livros.html">Livros e textos</a><span aria-hidden="true">/</span><span>A vida como ela se diz</span></nav>
   <p class="eb">Textos de Nelson Mendonça Neto</p>
   <h1>A vida como ela <em>se diz.</em></h1>
   <p class="tx-lead">O que a psicanálise escuta no amor, na saudade, no trabalho e em tudo aquilo que se repete. Textos curtos, para ler com calma.</p>
@@ -156,7 +156,7 @@ def main():
         m = f'''<main id="inicio" class="tx" tabindex="-1">
 <article>
 <div class="tx-hero art-hero"><div class="wrap">
-  <nav class="crumb" aria-label="Você está em"><a href="index.html">← Início</a><span aria-hidden="true">/</span><a href="textos.html">{SEC}</a></nav>
+  <nav class="crumb" aria-label="Você está em"><a href="index.html">← Início</a><span aria-hidden="true">/</span><a href="livros.html">Livros e textos</a><span aria-hidden="true">/</span><a href="textos.html">{SEC}</a></nav>
   <p class="eb">{SEC}</p>
   <h1>{esc(p["title"])}</h1>
   <span class="tx-meta"><time datetime="{p["date"].isoformat()}">{br(p["date"])}</time> · {p["min"]} min de leitura</span>
@@ -193,6 +193,23 @@ if(navigator.clipboard)navigator.clipboard.writeText(u).then(ok,function(){{prom
                f'<a class="pill pill-line" href="textos.html">Outros textos do Nelson</a></div></div></section>\n')
         home = full.replace('<section id="duvidas">', blk + '<section id="duvidas">', 1).replace("</style>", CSS + "</style>", 1)
         open("deploy/index.html", "w", encoding="utf-8").write(home)
+    # seção de textos na página Livros e textos (abaixo dos livros)
+    lv = open("deploy/livros.html", encoding="utf-8").read()
+    if "<!--TEXTOS-->" in lv:
+        if posts:
+            top = posts[:4]
+            items = "".join(
+                f'<li class="tx-item"><a href="textos/{p["slug"]}.html"><span class="tx-meta">{br(p["date"])} · {p["min"]} min de leitura</span>'
+                f'<h3>{esc(p["title"])}</h3><p>{esc(p["resumo"])}</p><span class="tx-go">Ler o texto <span aria-hidden="true">→</span></span></a></li>' for p in top)
+            more = '<p class="tx-all"><a class="pill pill-line" href="textos.html">Ver todos os textos <span aria-hidden="true">→</span></a></p>' if len(posts) > len(top) else ''
+            body = f'<ul class="tx-items">{items}</ul>{more}'
+        else:
+            body = '<p class="tx-empty">Os primeiros textos chegam em breve.</p>'
+        sec = (f'<section class="lv-sec lv-alt" id="textos" aria-labelledby="t-txt"><div class="wrap"><p class="eb">Textos</p>'
+               f'<h2 id="t-txt">A vida como ela <em>se diz.</em></h2>'
+               f'<p class="lv-hint" style="margin-top:-14px">O que a psicanálise escuta no amor, na saudade, no trabalho e em tudo aquilo que se repete.</p>{body}</div></section>')
+        lv = lv.replace("<!--TEXTOS-->", sec).replace("</style>", CSS + ".lv-sec .tx-item h3{font-family:var(--display);font-weight:400;font-size:clamp(22px,2.4vw,28px);line-height:1.2;margin:10px 0}.tx-all{margin-top:30px}</style>", 1)
+        open("deploy/livros.html", "w", encoding="utf-8").write(lv)
     return posts
 
 if __name__ == "__main__":

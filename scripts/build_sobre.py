@@ -51,7 +51,7 @@ main=f'''<main id="inicio" class="sb" tabindex="-1">
   <div class="wrap sb-two">
     <div class="lv-box"><p class="eb">Também escrevo</p><h2 id="t-proximo">Massa <em>de manobra.</em></h2>
       <p>Um ebook gratuito para psicólogos sobre neuromarketing, manipulação e por que a psicologia é política.</p>
-      <a class="pill pill-line" href="livros.html">Ver livros e cursos <span aria-hidden="true">→</span></a></div>
+      <a class="pill pill-line" href="livros.html">Ver livros e textos <span aria-hidden="true">→</span></a></div>
     <div class="lv-box"><p class="eb">Para começar</p><h2>O primeiro passo é <em>uma conversa.</em></h2>
       <p>Tudo começa por uma entrevista inicial, para entender o seu momento e combinar como seguimos.</p>
       <a class="pill pill-dark" href="pagamento.html">Quero começar <span aria-hidden="true">→</span></a></div>

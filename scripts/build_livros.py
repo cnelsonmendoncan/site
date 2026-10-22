@@ -9,10 +9,10 @@ W_PAL=wa("Olá, Nelson. Vim pelo site e gostaria de conversar sobre uma palestra
 main=f'''<main id="inicio" class="lv" tabindex="-1">
 <section class="lv-hero">
   <div class="wrap">
-    <nav class="crumb" aria-label="Você está em"><a href="index.html">← Início</a><span aria-hidden="true">/</span><span>Livros e cursos</span></nav>
-    <p class="eb">Livros, cursos e palestras</p>
+    <nav class="crumb" aria-label="Você está em"><a href="index.html">← Início</a><span aria-hidden="true">/</span><span>Livros e textos</span></nav>
+    <p class="eb">Livros e textos</p>
     <h1>Para além <em>do consultório.</em></h1>
-    <p class="lv-lead">Textos, cursos e encontros em que levo a psicanálise para fora da sessão: para colegas de profissão e para quem quer entender melhor o que nos atravessa.</p>
+    <p class="lv-lead">Livros e textos em que levo a psicanálise para fora da sessão: para colegas de profissão e para quem quer entender melhor o que nos atravessa.</p>
   </div>
 </section>
 
@@ -76,22 +76,7 @@ main=f'''<main id="inicio" class="lv" tabindex="-1">
   </div>
 </dialog>
 
-<section class="lv-sec lv-alt" aria-labelledby="t-cursos">
-  <div class="wrap lv-two">
-    <div class="lv-box">
-      <p class="eb">Cursos</p>
-      <h2 id="t-cursos">Em <em>preparação.</em></h2>
-      <p>Os primeiros cursos estão sendo preparados. Se você quer saber quando abrirem, me avise pelo WhatsApp.</p>
-      <a class="pill pill-line" href="{W_CURSO}" target="_blank" rel="noopener">Quero ser avisado <span aria-hidden="true">→</span></a>
-    </div>
-    <div class="lv-box">
-      <p class="eb">Palestras e encontros</p>
-      <h2>Para instituições <em>e grupos.</em></h2>
-      <p>Escolas, empresas, coletivos e grupos de estudo que queiram levar a escuta psicanalítica para uma conversa aberta.</p>
-      <a class="pill pill-line" href="{W_PAL}" target="_blank" rel="noopener">Fazer um convite <span aria-hidden="true">→</span></a>
-    </div>
-  </div>
-</section>
+<!--TEXTOS-->
 </main>'''
 css='''
 
@@ -170,8 +155,8 @@ a=full.index('<main id="inicio"'); b=full.index('</main>')+7
 out=full[:a]+main+full[b:]
 out=out.replace("</style>",css+"</style>",1)
 out=re.sub(r'href="#(?!")', 'href="index.html#', out)
-out=out.replace('<title>Nelson Mendonça Neto · Psicanálise</title>','<title>Livros e cursos · Nelson Mendonça Neto</title>')
-out=out.replace('<a class="hide-m" href="livros.html">Livros e cursos</a>','<a class="hide-m" href="livros.html" aria-current="page" style="color:var(--acol)">Livros e cursos</a>')
+out=out.replace('<title>Nelson Mendonça Neto · Psicanálise</title>','<title>Livros e textos · Nelson Mendonça Neto</title>')
+out=out.replace('<a class="hide-m" href="livros.html">Livros e textos</a>','<a class="hide-m" href="livros.html" aria-current="page" style="color:var(--acol)">Livros e textos</a>')
 out=re.sub(r'<script type="application/ld\+json">.*?</script>\n?','',out,flags=re.S)
 out=out.replace('<link rel="canonical" href="https://nelsonmendonca.com/">','<link rel="canonical" href="https://nelsonmendonca.com/livros">')
 out=out.replace('<meta property="og:url" content="https://nelsonmendonca.com/">','<meta property="og:url" content="https://nelsonmendonca.com/livros">')

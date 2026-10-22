@@ -15,7 +15,7 @@ document.addEventListener("click",function(e){var b=e.target.closest&&e.target.c
 /* retomar ao abrir outra página do site */
 var s=st();if(s.on){load(s.k||0,s.t||0);a.play().catch(function(){ui()})}else{k=s.k||0}
 /* navegação interna sem recarregar, para a música não parar */
-var PAGES=/^(\/|\/index(\.html)?|\/pagamento(\.html)?|\/livros(\.html)?|\/sobre(\.html)?|\/comecar(\.html)?|\/textos(\.html)?|\/textos\/[a-z0-9-]+(\.html)?)$/;
+var PAGES=/^(\/|\/index(\.html)?|\/pagamento(\.html)?|\/livros(\.html)?|\/sobre(\.html)?|\/comecar(\.html)?|\/cursos(\.html)?|\/textos(\.html)?|\/textos\/[a-z0-9-]+(\.html)?)$/;
 function local(u){return u.origin===location.origin&&PAGES.test(u.pathname)}
 function run(root){[].slice.call(root.querySelectorAll("script")).forEach(function(o){if(o.hasAttribute("data-persist")||o.type==="application/ld+json")return;var n=document.createElement("script");n.textContent=o.textContent;o.replaceWith(n)})}
 function go(url,push){return fetch(url,{credentials:"same-origin"}).then(function(r){if(!r.ok)throw 0;return r.text()}).then(function(h){

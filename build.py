@@ -12,7 +12,7 @@ if os.path.lexists("deploy"): os.remove("deploy")
 os.symlink(OUT, "deploy")
 sys.path.insert(0, SCR)
 try:
-    for s in ["build_site", "build_pag", "build_livros", "build_sobre", "build_lp"]:
+    for s in ["build_site", "build_pag", "build_livros", "build_cursos", "build_sobre", "build_lp"]:
         runpy.run_path(s + ".py", run_name="__main__")
     tx = runpy.run_path("build_textos.py")      # roda por último: acrescenta o bloco na página inicial
     posts = tx["main"]()
@@ -34,7 +34,7 @@ for f in glob.glob(os.path.join(OUT, "**", "*.html"), recursive=True):
 
 # sitemap
 today = D.date.today().isoformat()
-urls = [("/", "1.0", today), ("/sobre", "0.7", today), ("/pagamento", "0.8", today), ("/livros", "0.6", today), ("/textos", "0.8", today)]
+urls = [("/", "1.0", today), ("/sobre", "0.7", today), ("/pagamento", "0.8", today), ("/livros", "0.7", today), ("/cursos", "0.5", today), ("/textos", "0.7", today)]
 urls += [("/textos/" + p["slug"], "0.7", p["date"].isoformat()) for p in posts]
 with open(os.path.join(OUT, "sitemap.xml"), "w") as f:
     f.write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n')
