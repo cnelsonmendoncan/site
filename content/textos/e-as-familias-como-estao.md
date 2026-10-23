@@ -1,13 +1,15 @@
 ---
 title: E as famílias, como estão?
 date: 2026-10-23
-resumo: "Angústia pré-eleitoral é isso: o país dividido, todo mundo com medo, ansioso com o resultado e com o que vem depois dele."
-citacao: "O recalcado sempre volta. Na civilização não é diferente, até porque ela é feita de vários de nós."
+resumo: "Angústia pré-eleitoral é isso: o país dividido, todo mundo com medo,
+  ansioso com o resultado e com o que vem depois dele."
+citacao: O recalcado sempre volta. Na civilização não é diferente, até porque
+  ela é feita de vários de nós.
 rascunho: false
 ---
 Pergunto de verdade. Porque, por aqui, o clima anda pesado.
 
-Angústia pré-eleitoral é isso: o país dividido, todo mundo com medo, ansioso com o resultado e, talvez mais ainda, com o que vem depois dele. Tenho amigos que votam no B\* e, a maioria, no Lula. E o que eu vejo, de um lado e de outro, é gente cansada.
+Angústia pré-eleitoral é isso: o país dividido, todo mundo com medo, ansioso com o resultado e, talvez mais ainda, com o que vem depois dele. Tenho amigos que votam no B e, a maioria, no Lula. E o que eu vejo, de um lado e de outro, é gente cansada.
 
 Tem profissional querendo se posicionar. Tem gente que só queria sentar com a família, ter um encontro digno, uma conversa boa, um debate de verdade. Mas o que acontece na maioria das vezes? Discussão acalorada. A pessoa levanta da mesa com o estômago revirado e a sensação de que perdeu alguém, mesmo com todo mundo ainda vivo.
 
@@ -29,7 +31,7 @@ Respirar. Respirar fundo. Lembrar que quem está do outro lado da mesa também e
 
 O jeito é seguir pensando, virar as esquinas que der para virar e realizar o desejo de ser quem a gente é. E, já que falei dos grupos que essa onda quer escantear: aos amigos LGBTQIAPN+, estamos juntos. Eu levo como filosofia de vida o álbum *Born This Way*, e a garra da Lady Gaga, que colocou três anos de uma carreira bem-sucedida em jogo para espalhar uma ideia simples: ninguém rouba o espaço de ninguém, e todo mundo pode conviver junto.
 
-> [COLE AQUI O VERSO DE IMAGINE]
+> "You may say I'm a dreamer, but I'm not the only one"
 >
 > — John Lennon, *Imagine*
 
