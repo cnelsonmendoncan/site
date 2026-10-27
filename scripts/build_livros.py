@@ -45,12 +45,13 @@ main=f'''<main id="inicio" class="lv" tabindex="-1">
   <div class="bk-in">
     <picture><source type="image/webp" srcset="capa_massa.webp"><img class="bk-cap" src="capa_massa.jpg" alt="Capa do ebook Massa de manobra: uma multidão de pessoas iguais ouvindo um homem com um megafone" width="640" height="920" loading="lazy"></picture>
     <div class="bk-txt">
-      <p class="tags"><span class="tag t-breve">Gratuito</span><span class="tag">Ebook para psicólogos</span><span class="tag">PDF · 39 páginas</span></p>
+      <p class="tags"><span class="tag t-breve">Gratuito</span><span class="tag">Ebook para psicólogos</span><span class="tag">PDF e EPUB</span></p>
       <h3 id="bk-massa-t">Massa de manobra</h3>
       <p class="sub">Neuromarketing, manipulação e por que a psicologia é política.</p>
       <p>Tudo o que a psicologia sabe sobre desejo, vínculo e defesa já está sendo usado por agências, plataformas e campanhas para decidir o que as pessoas compram, do que têm medo e em quem votam. Este ebook mostra como esse mecanismo funciona, o que a neurociência diz sobre por que nos agarramos às nossas crenças, como isso chega ao consultório e o que nós, psicólogos, podemos fazer.</p>
       <p>Capítulos curtos, frases diretas e fontes declaradas, para ler sem cansar e terminar com algo que dá para usar já na próxima semana.</p>
-      <div class="obra-btns"><a class="pill pill-dark" href="Massa-de-Manobra-Nelson-Mendonca-Neto.pdf" download>Baixar o ebook gratuito <span aria-hidden="true">↓</span></a><a class="pill pill-line" href="{W_SHARE}" target="_blank" rel="noopener">Enviar para um colega</a></div>
+      <div class="obra-btns"><a class="pill pill-dark" href="Massa-de-Manobra-Nelson-Mendonca-Neto.pdf" download>Baixar em PDF <span aria-hidden="true">↓</span></a><a class="pill pill-dark" href="Massa-de-Manobra-Nelson-Mendonca-Neto.epub" download type="application/epub+zip">Baixar em EPUB <span aria-hidden="true">↓</span></a><a class="pill pill-line" href="{W_SHARE}" target="_blank" rel="noopener">Enviar para um colega</a></div>
+      <p class="fmt-nota">O EPUB ajusta o texto à tela: ideal para ler no celular, no Kindle ou no Apple Livros.</p>
       <details class="sumario"><summary>Ver o sumário</summary><ol>
         <li>Quando a psicologia aprendeu a vender</li><li>Todos nós desejamos como capitalistas</li><li>O cérebro político não pensa a frio</li>
         <li>Quando o teste de personalidade vira arma</li><li>A polarização como produto</li><li>O que chega na minha clínica</li>
@@ -136,6 +137,7 @@ css='''
 .obra-txt .sub{font-family:var(--display);font-style:italic;font-size:19px;color:var(--terra);margin:6px 0 18px}
 .obra-txt p{font-size:16.5px;line-height:1.7;color:#2E3744;max-width:58ch}
 .obra-btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.fmt-nota{font-size:.86rem;opacity:.75;margin-top:12px}
 .obra-txt p+p{margin-top:14px}
 .capa-img{display:block;box-shadow:0 22px 50px rgba(30,39,52,.28);border-radius:2px 6px 6px 2px;overflow:hidden;transition:box-shadow .25s}
 .capa-img:hover{box-shadow:0 26px 60px rgba(30,39,52,.38)}.capa-img img{display:block;width:100%;height:auto}
