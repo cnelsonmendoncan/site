@@ -11,6 +11,7 @@ TL=[("2014–2019","Graduação em Psicologia","Universidade Tiradentes, Sergipe
  ("2020–2024","Formação no Círculo Psicanalítico de Sergipe",""),
  ("2024–hoje","Tripé psicanalítico","O estudo da teoria, a análise pessoal, três vezes por semana, e a supervisão dos atendimentos."),
  ("2026","Livro Perverso é quem?",'Psicanálise, sexualidades e o medo do diferente. Em andamento. <a href="livros.html">Saiba mais</a>.'),
+ ("2026","Ebook Tem algo em mim que se assusta com o bom",'Psicanálise, merecimento e o medo de prosperar. Em andamento. <a href="livros.html">Saiba mais</a>.'),
  ("2026","Ebook Massa de manobra",'Sobre neuromarketing, manipulação e por que a psicologia é política. <a href="livros.html">Baixar gratuitamente</a>.')]
 tl="".join(f'<li><span class="tl-y">{y}</span><div><b>{t}</b>'+(f'<p>{d}</p>' if d else '')+'</div></li>' for y,t,d in TL)
 main=f'''<main id="inicio" class="sb" tabindex="-1">

@@ -4,6 +4,7 @@ full=open("deploy/index.html").read()
 def wa(t): return "https://wa.me/5579996041731?text="+U.quote(t)
 W_SHARE="https://wa.me/?text="+U.quote("Achei que você ia gostar deste ebook gratuito do psicólogo Nelson Mendonça Neto: Massa de manobra, sobre neuromarketing, manipulação e por que a psicologia é política. https://nelsonmendonca.com/livros#massa")
 W_PQ=wa("Olá, Nelson. Vim pelo site e quero ser avisado(a) do lançamento do livro Perverso é quem?")
+W_BOM=wa("Olá, Nelson. Vim pelo site e quero ser avisado(a) do lançamento do ebook Tem algo em mim que se assusta com o bom.")
 W_CURSO=wa("Olá, Nelson. Vim pelo site e quero ser avisado(a) quando abrirem os cursos.")
 W_PAL=wa("Olá, Nelson. Vim pelo site e gostaria de conversar sobre uma palestra ou um encontro.")
 main=f'''<main id="inicio" class="lv" tabindex="-1">
@@ -34,6 +35,13 @@ main=f'''<main id="inicio" class="lv" tabindex="-1">
         <span class="b-tag t-wip">Em andamento</span>
         <span class="b-title">Perverso é quem?</span>
         <span class="b-sub">Psicanálise, sexualidades e o medo do diferente</span>
+        <span class="b-more">Saber mais <span aria-hidden="true">→</span></span>
+      </button>
+      <button type="button" class="book" data-open="bk-bom" aria-haspopup="dialog">
+        <span class="b-cover"><picture><source type="image/webp" srcset="capa_bom.webp"><img src="capa_bom.jpg" alt="" width="640" height="920" loading="lazy"></picture></span>
+        <span class="b-tag t-wip">Em andamento</span>
+        <span class="b-title">Tem algo em mim que se assusta com o bom</span>
+        <span class="b-sub">Psicanálise, merecimento e o medo de prosperar</span>
         <span class="b-more">Saber mais <span aria-hidden="true">→</span></span>
       </button>
     </div>
@@ -73,6 +81,23 @@ main=f'''<main id="inicio" class="lv" tabindex="-1">
       <div class="obra-btns"><a class="pill pill-dark" href="{W_PQ}" target="_blank" rel="noopener">Quero ser avisado do lançamento <span aria-hidden="true">→</span></a></div>
       <details class="sumario"><summary>Ver as partes do livro</summary><ol>
         <li>Fundamentos</li><li>As orientações</li><li>Gênero</li><li>Sociedade</li><li>Perverso é quem?</li><li>Viver e escutar</li></ol></details>
+    </div>
+  </div>
+</dialog>
+
+<dialog class="bk-dlg" id="bk-bom" aria-labelledby="bk-bom-t">
+  <button type="button" class="bk-x" data-close aria-label="Fechar">×</button>
+  <div class="bk-in">
+    <picture><source type="image/webp" srcset="capa_bom.webp"><img class="bk-cap" src="capa_bom.jpg" alt="Capa do ebook Tem algo em mim que se assusta com o bom: pintura de um homem descalço que se encolhe e cobre o rosto diante de um feixe de luz dourada" width="640" height="920" loading="lazy"></picture>
+    <div class="bk-txt">
+      <p class="tags"><span class="tag t-breve">Em andamento</span><span class="tag">Ebook</span></p>
+      <h3 id="bk-bom-t">Tem algo em mim que se assusta com o bom</h3>
+      <p class="sub">Psicanálise, merecimento e o medo de prosperar.</p>
+      <p>Todo mundo conhece o medo de perder. Este livro é sobre outro medo, bem mais esquisito: o medo de ganhar. O aperto no peito quando a conta fecha no azul pela primeira vez, a desconfiança quando alguém diz que gosta da gente, a vontade estranha de estragar alguma coisa justamente quando ela começa a dar certo.</p>
+      <p>É um livro sobre prosperar, no sentido mais antigo da palavra: a vida andar na direção do que a gente deseja, sem que uma parte nossa puxe o freio. Passa por Freud, pelo juiz que mora dentro da gente, pelo dinheiro e pela escassez, pelos jeitos discretos com que a gente se sabota e pela gratidão, que é o que faz o bom conseguir ficar. Para quem sente isso na pele e para colegas da psicologia e da psicanálise que escutam essas histórias no consultório.</p>
+      <div class="obra-btns"><a class="pill pill-dark" href="{W_BOM}" target="_blank" rel="noopener">Quero ser avisado do lançamento <span aria-hidden="true">→</span></a></div>
+      <details class="sumario"><summary>Ver as partes do livro</summary><ol>
+        <li>O susto com o bom</li><li>Dinheiro e escassez</li><li>Os jeitos de se sabotar</li><li>Prosperar</li></ol></details>
     </div>
   </div>
 </dialog>
