@@ -8,13 +8,13 @@ main=f'''<main id="inicio" class="pg" tabindex="-1">
 <section class="pg-hero">
   <div class="pg-card">
     <nav class="crumb" aria-label="Você está em"><a href="index.html">← Início</a><span aria-hidden="true">/</span><span>Como começar</span></nav>
-    <p class="eb">O processo de início &amp; acolhimento</p>
+    <p class="eb">Como a gente começa</p>
     <h1>O primeiro passo é <em>uma entrevista inicial.</em></h1>
-    <p class="pg-lead">É um encontro online dedicado a escutar o seu momento, compreender a sua demanda e avaliar juntos a viabilidade de darmos início ao processo analítico.</p>
+    <p class="pg-lead">É a possibilidade de a gente se conhecer antes de dar o passo para uma análise. É nela que eu identifico a sua demanda, vejo se sou o profissional adequado para ela e, claro, a grosso modo: se você foi com a minha cara. Ali também conversamos sobre horários e honorários.</p>
 
     <div class="pg-block">
       <p class="eb">O tempo do tratamento</p>
-      <p>Na psicanálise, os combinados fazem parte do próprio trabalho. Frequência, horários e honorários, inclusive os da própria entrevista, são conversados em conjunto, na sessão, de forma individual e confidencial.</p>
+      <p>O dinheiro faz parte do tratamento. Por isso, frequência, horários e honorários, inclusive os da entrevista inicial, são conversados entre nós, na sessão.</p>
       <p style="margin-top:12px">As sessões duram de 45 a 50 minutos. Quando a demanda pede, podem ser duas vezes por semana ou ter encontros extras, sempre combinados em sessão.</p>
     </div>
 

@@ -12,8 +12,8 @@ main=f'''<main id="inicio" class="lv" tabindex="-1">
   <div class="wrap">
     <nav class="crumb" aria-label="Você está em"><a href="index.html">← Início</a><span aria-hidden="true">/</span><span>Livros e textos</span></nav>
     <p class="eb">Livros e textos</p>
-    <h1>Para além <em>do consultório.</em></h1>
-    <p class="lv-lead">Livros e textos em que levo a psicanálise para fora da sessão: para colegas de profissão e para quem quer entender melhor o que nos atravessa.</p>
+    <h1>Escrevo para dar sentido <em>à falta.</em></h1>
+    <p class="lv-lead">Somos seres faltantes, e da falta podem surgir possibilidades que antes eram enxergadas de um jeito só. É sentindo a falta dos conteúdos de que eu precisava que busco costurar um estudo prático e muito bem mastigado, primeiro para mim. Mas aprendi a compartilhar. Esses são os meus bebês.</p>
   </div>
 </section>
 
@@ -57,7 +57,7 @@ main=f'''<main id="inicio" class="lv" tabindex="-1">
       <h3 id="bk-massa-t">Massa de manobra</h3>
       <p class="sub">Neuromarketing, manipulação e por que a psicologia é política.</p>
       <p>Tudo o que a psicologia sabe sobre desejo, vínculo e defesa já está sendo usado por agências, plataformas e campanhas para decidir o que as pessoas compram, do que têm medo e em quem votam. Este ebook mostra como esse mecanismo funciona, o que a neurociência diz sobre por que nos agarramos às nossas crenças, como isso chega ao consultório e o que nós, psicólogos, podemos fazer.</p>
-      <p>Capítulos curtos, frases diretas e fontes declaradas, para ler sem cansar e terminar com algo que dá para usar já na próxima semana.</p>
+      <p>Escrevi este livro em época de eleição, quando, para mim, estava mais do que claro o que estava acontecendo. Juntei o que construí na universidade e nas formações e dei uma cara nova com a experiência que tenho.</p>
       <div class="obra-btns"><a class="pill pill-dark" href="Massa-de-Manobra-Nelson-Mendonca-Neto.pdf" download>Baixar em PDF <span aria-hidden="true">↓</span></a><a class="pill pill-dark" href="Massa-de-Manobra-Nelson-Mendonca-Neto.epub" download type="application/epub+zip">Baixar em EPUB <span aria-hidden="true">↓</span></a><a class="pill pill-line" href="{W_SHARE}" target="_blank" rel="noopener">Enviar para um colega</a></div>
       <p class="fmt-nota">O EPUB ajusta o texto à tela: ideal para ler no celular, no Kindle ou no Apple Livros.</p>
       <details class="sumario"><summary>Ver o sumário</summary><ol>

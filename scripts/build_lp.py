@@ -18,27 +18,17 @@ main=f'''<main id="inicio" tabindex="-1">
 </section>
 
 <section class="intro lp-intro"><div class="wrap">
-  <p class="intro-lead">Um espaço de escuta, no seu tempo, para olhar com cuidado <em style="color:var(--terra)">para o que está pesando.</em></p>
+  <p class="intro-lead">O primeiro encontro pode dar um susto. <em style="color:var(--terra)">Nem sempre é fácil se colocar num lugar bom, onde existe a possibilidade de ser olhado com bons olhos.</em></p>
   <p class="intro-sub">Atendimento online, em português, para adultos no Brasil e brasileiros em qualquer país, num horário fixo que, com o tempo, vira um lugar seu.</p>
 </div></section>
 
-<section class="recog lp-recog"><div class="wrap">
-  <p class="eb">Talvez seja o seu momento se…</p>
-  <h2>Às vezes a vida segue funcionando, <em>mas algo não sai do lugar.</em></h2>
-  <ul>
-    <li>Algo se repete na sua vida e você não sabe bem por quê.</li>
-    <li>A angústia, o cansaço ou a tristeza estão ocupando espaço demais.</li>
-    <li>Construiu uma vida em outro país, e a saudade virou peso.</li>
-    <li>Você quer se conhecer melhor, não apenas aliviar um sintoma.</li>
-  </ul>
-</div></section>
 
 <section class="process lp-steps"><div class="wrap">
   <p class="eb">Como começar</p>
   <h2>Três passos, <em>sem pressa.</em></h2>
   <div class="steps">
     <div class="step"><h3>1. Você me chama</h3><p>Pelo WhatsApp. Combinamos um horário para a sua entrevista.</p></div>
-    <div class="step"><h3>2. Entrevista inicial</h3><p>Um atendimento online e remunerado, para escutar o seu momento e avaliarmos juntos se faz sentido seguir.</p></div>
+    <div class="step"><h3>2. Entrevista inicial</h3><p>A gente se conhece, eu identifico a sua demanda e você vê se foi com a minha cara. É um atendimento online e remunerado.</p></div>
     <div class="step"><h3>3. Combinamos o acompanhamento</h3><p>Frequência, horários e honorários são conversados ali, de forma individual.</p></div>
   </div>
   <p class="lp-cta"><a class="pill pill-dark" {A}>Agendar entrevista inicial <span aria-hidden="true">→</span></a></p>
@@ -48,8 +38,8 @@ main=f'''<main id="inicio" tabindex="-1">
   <img class="cutout" src="foto_sobre.webp" alt="Nelson Mendonça Neto" decoding="async">
   <div class="about-txt">
     <p class="eb">Quem vai te escutar</p>
-    <h2>Uma clínica voltada <em>à vida adulta.</em></h2>
-    <p class="lead" style="margin-top:18px">Sou psicólogo e psicanalista e atendo desde 2020. Escuto relações, escolhas, desejo, trabalho e repetição: o modo como alguém tenta sustentar a própria vida sem desaparecer dela.</p>
+    <h2>Prazer, <em>eu sou o Nelson.</em></h2>
+    <p class="lead" style="margin-top:18px">Sou psicólogo e psicanalista e atendo desde 2020. Mas acho que o meu diferencial não está no tempo em si, e sim em como aproveitei esse tempo a favor da clínica. Para mim, a análise é a possibilidade de quem não está contente com a vida torná-la, no mínimo, possível de digerir.</p>
     <p>Atendo online pessoas em todo o Brasil e brasileiros no exterior, no fuso de cada um.</p>
     <p class="about-more"><a class="pill pill-acol" href="sobre.html">Conheça minha trajetória <span aria-hidden="true">→</span></a></p>
     <p class="crp">Psicólogo e Psicanalista · CRP 19/3888</p>
@@ -62,7 +52,7 @@ main=f'''<main id="inicio" tabindex="-1">
   <details><summary>A análise online funciona?</summary><p>Sim. O que sustenta o trabalho é a escuta e a regularidade dos encontros. Basta um lugar reservado e boa conexão.</p></details>
   <details><summary>É sigiloso?</summary><p>Sim, sempre. Tudo o que você disser fica entre nós.</p></details>
   <details><summary>Moro em outro país. Como funciona?</summary><p>Os horários são ajustados ao seu fuso e a cobrança é feita na moeda do seu país, sem conversões.</p></details>
-  <details><summary>Quanto custa?</summary><p>A entrevista inicial é um atendimento profissional e é remunerada. Os honorários são conversados com você, em conjunto, na própria sessão.</p></details>
+  <details><summary>Quanto custa?</summary><p>O dinheiro faz parte do tratamento, e por isso eu não divulgo o valor nas redes. Os honorários são conversados na entrevista inicial, que também é remunerada.</p></details>
   <details><summary>Preciso saber exatamente o que falar?</summary><p>Não. A análise também começa pelo que ainda não está organizado.</p></details>
 </div></section>
 

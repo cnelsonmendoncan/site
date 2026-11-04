@@ -21,8 +21,8 @@ main=f'''<main id="inicio" class="sb" tabindex="-1">
     <div class="about-txt">
       <nav class="crumb" aria-label="Você está em"><a href="index.html">← Início</a><span aria-hidden="true">/</span><span>Sobre</span></nav>
       <p class="eb">Quem sou eu</p>
-      <h1>Uma clínica voltada <em>à vida adulta.</em></h1>
-      <p class="lead" style="margin-top:18px">Psicólogo e psicanalista, escuto relações, escolhas, desejo, trabalho e repetição: o modo como alguém tenta sustentar a própria vida sem desaparecer dela.</p>
+      <h1>Prazer, <em>eu sou o Nelson.</em></h1>
+      <p class="lead" style="margin-top:18px">Sou psicólogo e psicanalista e atendo desde 2020. Mas acho que o meu diferencial não está no tempo em si, e sim em como aproveitei esse tempo a favor da clínica. Para mim, a análise é a possibilidade de quem não está contente com a vida torná-la, no mínimo, possível de digerir.</p>
       <p>Cheguei à psicanálise por dois caminhos. Na faculdade, ela me parecia a abordagem mais difícil, e isso me instigou: eu pensava que era preciso conhecê-la de verdade antes de criticá-la. Ao mesmo tempo, era a única que parecia capaz de responder a perguntas muito pessoais sobre quem eu sou. Fui atrás dessas respostas, e foi assim que a psicanálise virou o meu caminho.</p>
       <p class="crp">Psicólogo e Psicanalista · CRP 19/3888</p>
     </div>
@@ -39,7 +39,8 @@ main=f'''<main id="inicio" class="sb" tabindex="-1">
 <section class="sb-story" aria-labelledby="t-hist">
   <div class="wrap sb-story-in">
     <p class="eb">Minha história</p>
-    <h2 id="t-hist">O caminho <em>até aqui.</em></h2>
+    <h2 id="t-hist">A psicanálise chegou para mim <em>como algo estranho.</em></h2>
+    <p>Algo meio non-sense, mas aquele non-sense me instigou a me tornar o que sou hoje.</p>
     <p>Me formei em Psicologia pela Universidade Tiradentes, entre 2014 e 2019. Ainda na graduação, fiz parte do Navegantes Psi, um grupo de quatro estudantes que organizava palestras e cursos, convidava psicanalistas renomados e aproximava a psicologia de outras áreas, como a medicina e a nutrição, e de temas do dia a dia, como redes sociais, alimentação e ansiedade.</p>
     <p>Também passei pela psicologia organizacional, no Hospital dos Olhos de Sergipe e no RH da Multiserv, e por dois anos estagiei no Centro de Combate à Homofobia (CCH) do Governo de Sergipe, num grupo que buscava enfrentar a homofobia por meio de políticas públicas.</p>
     <p>Em 2020, com mais quatro colegas, fundei a Nave Social, o braço social do Navegantes Psi: uma clínica para que pessoas em situação de vulnerabilidade tivessem acesso a uma psicanálise de qualidade. Estive à frente dela, como presidente, até 2024.</p>
