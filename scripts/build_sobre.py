@@ -49,6 +49,18 @@ main=f'''<main id="inicio" class="sb" tabindex="-1">
   </div>
 </section>
 
+<section id="para-quem" class="sb-move">
+  <div class="wrap">
+    <p class="eb">O que me move</p>
+    <h2>O sintoma também <em>tem o seu preço.</em></h2>
+    <div class="move-grid"><div>    <p class="lead" style="margin-top:18px">Ninguém deseja perder dinheiro, ficar em relacionamentos falidos ou desistir do que quer. Mas existe um lado nosso que trama contra o próprio desejo, e às vezes a gente escuta esse lado como se fosse a nossa vontade de verdade. Freud mostrou que todo sintoma tem os seus benefícios. O meu trabalho é mostrar o quanto ficar nele custa.</p>
+    <p class="lead" style="margin-top:12px">A vida é uma só. Que bonito seria chegar ao fim dela e ver que conseguimos realizar, ser felizes, ter momentos com quem amamos. A gente adora estar sozinho e detesta saber que depende do outro, mas foi junto que a humanidade se construiu. <em style="color:var(--terra)">Sozinho você até consegue. Junto, a gente vai mais longe.</em></p>
+    <p class="lead" style="margin-top:12px">E o tempo leva tempo: elaborar não é atraso, é o caminho. Trazer o inconsciente de forma bruta pode doer; por isso, cada passo vem no seu tempo.</p>
+    </div>
+    <figure class="move-map"><img src="cidade_psiquica.webp" alt="Mapa ilustrado de uma cidade com três regiões: id, ego e superego, ligadas por pontes e caminhos" width="900" height="1350" loading="lazy" decoding="async"><figcaption>A cidade psíquica: o id, o ego e o superego negociando o tempo todo. Às vezes, um lado nosso trama contra o outro.</figcaption></figure></div>
+  </div>
+</section>
+
 <section class="sb-next" aria-labelledby="t-proximo">
   <div class="wrap sb-two">
     <div class="lv-box"><p class="eb">Também escrevo</p><h2 id="t-proximo">Massa <em>de manobra.</em></h2>
