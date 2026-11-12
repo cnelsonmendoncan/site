@@ -14,7 +14,7 @@ main=f'''<main id="inicio" tabindex="-1">
   <picture><source media="(min-width:761px)" type="image/webp" srcset="nelson_hero_wide.webp"><source media="(min-width:761px)" srcset="nelson_hero_wide.jpg"><source type="image/webp" srcset="nelson_hero.webp"><img class="hero-photo" src="nelson_hero.jpg" alt="Nelson Mendonça Neto, psicólogo e psicanalista" fetchpriority="high"></picture>
   <div class="hero-side hero-left"><b class="hs-name">Nelson<br>Mendonça<br>Neto</b><span class="hs-bar" aria-hidden="true"></span><span class="hs-info"><span>Psicólogo e Psicanalista</span><span>CRP 19/3888</span><span class="hero-aud">Psicanálise online</span><span class="hero-aud2">Brasileiros no exterior<br>Adultos no Brasil</span></span></div>
   <a class="pill hero-right" {A}>Agendar entrevista inicial <span aria-hidden="true">→</span></a>
-  <h1 class="hero-h1">Há coisas que só mudam quando <em>são ditas.</em></h1>
+  <h1 class="hero-h1">Há coisas que só mudam quando <em>são ditas.</em><span class="hero-sub">Psicanálise online, em português</span></h1>
 </section>
 
 <section class="intro lp-intro"><div class="wrap">
@@ -33,6 +33,19 @@ main=f'''<main id="inicio" tabindex="-1">
   </div>
   <p class="lp-cta"><a class="pill pill-dark" {A}>Agendar entrevista inicial <span aria-hidden="true">→</span></a></p>
 </div></section>
+
+<section id="para-quem-e">
+  <div class="wrap">
+    <p class="eb">Para quem é</p>
+    <h2>Este trabalho é <em>para você se…</em></h2>
+    <div class="fit">
+      <div class="yes"><h3>É para você se</h3><p>A análise funciona para quem já não consegue enxergar outras possibilidades de passar pela mesma situação com as ferramentas que tem, e está a fim de fazer algo com isso.</p></div>
+      <div class="no"><h3>Talvez não seja comigo se</h3><ul>
+        <li>a escolha é só pelo menor preço. Aqui, o vínculo vem antes;</li>
+        <li>você está em crise agora. Nesse caso, procure o CVV (188) ou o SAMU (192).</li></ul></div>
+    </div>
+  </div>
+</section>
 
 <section class="about" id="sobre"><div class="wrap">
   <img class="cutout" src="foto_sobre.webp" alt="Nelson Mendonça Neto" decoding="async">
