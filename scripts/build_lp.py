@@ -41,7 +41,6 @@ main=f'''<main id="inicio" tabindex="-1">
     <div class="fit">
       <div class="yes"><h3>É para você se</h3><p>A análise funciona para quem já não consegue enxergar outras possibilidades de passar pela mesma situação com as ferramentas que tem, e está a fim de fazer algo com isso.</p></div>
       <div class="no"><h3>Talvez não seja comigo se</h3><ul>
-        <li>a escolha é só pelo menor preço. Aqui, o vínculo vem antes;</li>
         <li>você está em crise agora. Nesse caso, procure o CVV (188) ou o SAMU (192).</li></ul></div>
     </div>
   </div>
