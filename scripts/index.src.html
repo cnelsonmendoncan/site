@@ -537,6 +537,25 @@ header .brand{min-height:44px}.crumb a{display:inline-flex;align-items:center;mi
 .svc a{display:inline-flex;align-items:center;min-height:44px}details p a,.tl a,.sb-tl a{display:inline-block;padding-block:12px;margin-block:-12px}
 @media (min-width:761px){.hero-sub{text-shadow:0 1px 3px rgba(30,39,52,.9),0 0 18px rgba(30,39,52,.7)}}
 @media (min-width:761px){.hero2::after{content:"";position:absolute;left:0;right:0;bottom:0;height:46%;background:linear-gradient(to top,rgba(24,31,42,.72),rgba(24,31,42,.38) 45%,rgba(24,31,42,0));z-index:1;pointer-events:none}}
+
+/* Na mídia */
+.midia{margin-top:56px;padding-top:28px;border-top:1px solid var(--line)}
+.md-grid{display:grid;grid-template-columns:1.25fr 1fr 1fr;grid-template-rows:1fr 1fr;gap:14px;margin-top:6px}
+.md-card{display:flex;flex-direction:column;text-decoration:none;color:var(--ink);background:#FBF8F3;border:1px solid var(--line);border-radius:4px;padding:20px 20px 16px;min-width:0;transition:transform .2s ease,box-shadow .2s ease}
+.md-card:hover{transform:translateY(-2px);box-shadow:0 14px 30px rgba(30,39,52,.12)}
+.md-v{font-family:var(--body);font-weight:700;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--terra);line-height:1.4}
+.md-quote{font-family:var(--display);font-style:italic;font-size:clamp(18px,1.5vw,21px);line-height:1.3;color:var(--prof);margin:10px 0 14px}
+.md-go{margin-top:auto;font-weight:700;font-size:14px;color:var(--prof)}
+.md-tv{grid-row:1 / span 2;padding:0;position:relative;overflow:hidden;background:var(--prof);color:var(--paper);border:0}
+.md-tv picture,.md-tv img{display:block;width:100%;height:100%}.md-tv img{object-fit:cover;min-height:300px}
+.md-tvtx{position:absolute;left:0;right:0;bottom:0;display:flex;flex-direction:column;gap:6px;padding:56px 20px 18px;background:linear-gradient(to top,rgba(24,31,42,.94),rgba(24,31,42,.7) 60%,rgba(24,31,42,0))}
+.md-tv .md-v{color:#F2D9C4}.md-tv .md-go{color:var(--paper);margin-top:4px}
+.md-t{font-family:var(--display);font-size:clamp(19px,1.7vw,24px);line-height:1.2;color:#fff}
+.md-play{position:absolute;left:20px;top:20px;width:52px;height:52px;border-radius:50%;background:rgba(246,241,233,.94);box-shadow:0 6px 18px rgba(0,0,0,.3)}
+.md-play::after{content:"";position:absolute;left:21px;top:16px;border-left:16px solid var(--prof);border-top:10px solid transparent;border-bottom:10px solid transparent}
+.md-radio{background:var(--prof);border-color:var(--prof)}.md-radio .md-v{color:#F2D9C4}.md-radio .md-quote,.md-radio .md-go{color:var(--paper)}
+@media (max-width:900px){.md-grid{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:12px;padding-bottom:8px;margin-inline:-20px;padding-inline:20px;-webkit-overflow-scrolling:touch}
+ .md-card{flex:0 0 78%;scroll-snap-align:start}.md-tv{flex-basis:84%}.md-tv img{min-height:280px;max-height:340px}}
 </style>
 
 <a class="skip" href="#inicio">Pular para o conteúdo</a>
@@ -574,10 +593,17 @@ header .brand{min-height:44px}.crumb a{display:inline-flex;align-items:center;mi
 </div>
       <figure class="intro-q"><blockquote>“O amor maduro nasce do luto da perfeição.”</blockquote><figcaption>Nelson Mendonça Neto, em entrevista ao <a href="https://93noticias.com.br/psicanalista-alerta-para-o-romance-sob-demanda/" target="_blank" rel="noopener">93 Notícias</a> sobre o “romance sob demanda”</figcaption></figure>
     </div>
-    <div class="press" id="midia"><small>Já falei sobre psicanálise em</small>
-      <a href="https://www.jornaldacidade.net/saude/2026/05/349926/o-nos-virou-um-peso-na-era-do-romance-sob-demanda.html" target="_blank" rel="noopener">Jornal da Cidade</a>
-      <a href="https://93noticias.com.br/psicanalista-alerta-para-o-romance-sob-demanda/" target="_blank" rel="noopener">93 Notícias</a>
-      <a href="https://www.youtube.com/watch?v=3sf7AXM-6Ao" target="_blank" rel="noopener">TV Sergipe</a></div>
+    <div class="midia" id="midia">
+      <p class="eb">Na mídia</p>
+      <div class="md-grid" tabindex="0" role="region" aria-label="Entrevistas e matérias">
+        <a class="md-card md-tv" href="https://www.youtube.com/watch?v=4OcI6Vr-PQo" target="_blank" rel="noopener"><picture><source type="image/webp" srcset="midia_voce_em_dia.webp"><img src="midia_voce_em_dia.jpg" alt="Nelson Mendonça Neto no estúdio do programa Você em Dia, entre os dois apresentadores" width="960" height="720" loading="lazy" decoding="async"></picture><span class="md-play" aria-hidden="true"></span><span class="md-tvtx"><span class="md-v">TV Atalaia · Você em Dia</span><span class="md-t">Relacionamentos na era digital: curtida em rede social é traição?</span><span class="md-go">Assistir ao programa <span aria-hidden="true">→</span></span></span></a>
+        <a class="md-card md-q md-radio" href="https://www.youtube.com/watch?v=3sf7AXM-6Ao" target="_blank" rel="noopener"><span class="md-v">Imprensa FM 105.9 · Jornal da Imprensa</span><span class="md-quote">Entrevista ao vivo, no rádio.</span><span class="md-go">Ouvir a entrevista <span aria-hidden="true">→</span></span></a>
+        <a class="md-card md-q" href="https://www.jornaldacidade.net/saude/2026/05/349926/o-nos-virou-um-peso-na-era-do-romance-sob-demanda.html" target="_blank" rel="noopener"><span class="md-v">Jornal da Cidade</span><span class="md-quote">“A sociedade contemporânea cultua a fase da conquista como um fim em si mesma.”</span><span class="md-go">Ler a matéria <span aria-hidden="true">→</span></span></a>
+        <a class="md-card md-q" href="https://93noticias.com.br/psicanalista-alerta-para-o-romance-sob-demanda/" target="_blank" rel="noopener"><span class="md-v">93 Notícias</span><span class="md-quote">“Estamos assistindo a uma fuga em massa da intimidade real.”</span><span class="md-go">Ler a matéria <span aria-hidden="true">→</span></span></a>
+        <a class="md-card md-q" href="https://www.clicksergipe.com.br/saude/7/106958/o-quotnosquot-virou-um-peso-na-era-do-romance-sob-demanda.html" target="_blank" rel="noopener"><span class="md-v">Click Sergipe</span><span class="md-quote">“Enquanto buscarmos apenas o frio na barriga, seremos eternos turistas emocionais.”</span><span class="md-go">Ler a matéria <span aria-hidden="true">→</span></span></a>
+      </div>
+      <p class="tgrid-hint" aria-hidden="true">Arraste para o lado para ver mais →</p>
+    </div>
   </div>
 </section>
 
