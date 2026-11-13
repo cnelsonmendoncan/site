@@ -8,3 +8,5 @@
 
 .trilha{transition:opacity .25s ease,transform .25s ease}
 .trilha.tr-hide{opacity:0;transform:translateY(12px);pointer-events:none}
+
+@media (max-width:760px){.trilha{left:auto;right:14px;padding:0;width:46px;height:46px;justify-content:center}.trilha .tr-tx{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}}
