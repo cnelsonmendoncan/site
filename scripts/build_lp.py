@@ -98,5 +98,26 @@ out=out.replace('<link rel="canonical" href="https://nelsonmendonca.com/">','<li
 out=out.replace('<meta property="og:url" content="https://nelsonmendonca.com/">','<meta property="og:url" content="https://nelsonmendonca.com/comecar">')
 out=re.sub(r'<meta name="description" content="[^"]*">','<meta name="description" content="Psicanálise online com Nelson Mendonça Neto, psicólogo e psicanalista. O primeiro passo é uma entrevista inicial.">',out)
 assert 'trilha' not in out.split('</style>',1)[1], "trilha restante"
+# Pixel da Meta: só nesta página, e só depois que a pessoa aceita
+PIXEL='''<div id="ck" hidden role="region" aria-label="Aviso de medição"><p>Esta página usa um código da Meta para medir os anúncios. Posso ativar?</p><div><button type="button" id="ck-n">Agora não</button><button type="button" id="ck-s">Pode ativar</button></div></div>
+<script>(function(){var K="nmn-pixel",ID="1124844613795214",on=false;
+function load(){if(on)return;on=true;!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init',ID);fbq('track','PageView')}
+var v=null;try{v=localStorage.getItem(K)}catch(e){}
+var box=document.getElementById("ck");
+if(v==="sim")load();else if(v!=="nao")box.hidden=false;
+function set(x){try{localStorage.setItem(K,x)}catch(e){}box.hidden=true;if(x==="sim")load()}
+document.getElementById("ck-s").addEventListener("click",function(){set("sim")});
+document.getElementById("ck-n").addEventListener("click",function(){set("nao")});
+document.addEventListener("click",function(e){var l=e.target.closest&&e.target.closest('a[href*="wa.me"]');if(l&&on&&window.fbq)fbq('track','Lead')});
+})();</script>
+'''
+PIXCSS='''#ck{position:fixed;left:16px;right:16px;bottom:16px;z-index:60;max-width:560px;margin-inline:auto;background:#FBF8F3;color:#1E2734;border:1px solid rgba(30,39,52,.18);border-radius:10px;box-shadow:0 18px 44px rgba(16,22,30,.28);padding:16px 18px;display:flex;gap:14px;align-items:center;justify-content:space-between;flex-wrap:wrap;font:500 14px/1.45 var(--body)}
+#ck[hidden]{display:none}#ck p{margin:0;flex:1 1 240px}#ck div{display:flex;gap:8px}
+#ck button{min-height:44px;border-radius:999px;padding:10px 18px;font:700 14px var(--body);cursor:pointer;border:1.5px solid #1E2734;background:transparent;color:#1E2734}
+#ck #ck-s{background:#1E2734;color:#F6F1E9}
+'''
+out=out.replace("</style>",PIXCSS+"</style>",1)
+out=out.replace("\n</body>","\n"+PIXEL+"</body>",1)
+assert 'id="ck"' in out
 open("deploy/comecar.html","w").write(out)
 print("ok")
