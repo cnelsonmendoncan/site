@@ -1,6 +1,6 @@
 ---
 title: A pressão que ninguém conta sobre fazer 30
-date: 2026-11-16
+date: 2026-11-12
 resumo: "Parece que existe uma lista e que, aos 30, ela já deveria estar toda ticada."
 citacao: "A gente jura que a cobrança é nossa, e muitas vezes ela só mora na gente."
 rascunho: false
