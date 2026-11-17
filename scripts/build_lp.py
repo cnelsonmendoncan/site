@@ -111,7 +111,7 @@ s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
 fbq('init', '1124844613795214');
 fbq('track', 'PageView');
-document.addEventListener('click',function(e){var l=e.target.closest&&e.target.closest('a[href*="wa.me"]');if(l)fbq('track','Lead')});
+document.addEventListener('click',function(e){var l=e.target.closest&&e.target.closest('a[href*="wa.me"]');if(!l||e.button||e.metaKey||e.ctrlKey)return;e.preventDefault();var u=l.href;fbq('track','Lead');setTimeout(function(){var w=window.open(u,'_blank');if(!w)location.href=u},500)});
 </script>
 <noscript><img height="1" width="1" style="display:none"
 src="https://www.facebook.com/tr?id=1124844613795214&ev=PageView&noscript=1"
