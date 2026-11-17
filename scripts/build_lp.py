@@ -1,7 +1,7 @@
 # Gera deploy/comecar.html: landing page escondida para quem chega pelos anúncios
 import re
 full=open("deploy/index.html").read()
-WA="https://wa.me/5579996041731?text=Ol%C3%A1%2C%20Nelson.%20Vi%20seu%20an%C3%BAncio%20e%20gostaria%20de%20agendar%20a%20entrevista%20inicial."
+WA="https://wa.me/5579996041731?text=Oi%2C%20Nelson.%20Vi%20seu%20an%C3%BAncio%20e%20gostaria%20de%20conversar%20com%20voc%C3%AA%20sobre%20psicoterapia."
 A=f'href="{WA}" target="_blank" rel="noopener"'
 header=f'''<header>
   <div class="wrap">

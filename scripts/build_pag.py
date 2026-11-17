@@ -2,7 +2,7 @@
 import re
 full=open("deploy/index.html").read()
 pix,pp,wise=open("logos.txt").read().split("\n")[:3]
-WA="https://wa.me/5579996041731?text=Ol%C3%A1%2C%20Nelson.%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20a%20entrevista%20inicial."
+WA="https://wa.me/5579996041731?text=Oi%2C%20Nelson.%20Vim%20pelo%20seu%20site%20e%20gostaria%20de%20conversar%20com%20voc%C3%AA%20sobre%20psicoterapia."
 WAS="https://wa.me/5579996041731?text=Ol%C3%A1%2C%20Nelson.%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20entrevista%20pela%20agenda%20social."
 main=f'''<main id="inicio" class="pg" tabindex="-1">
 <section class="pg-hero">
